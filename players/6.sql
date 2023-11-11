@@ -4,5 +4,4 @@ Pennsylvania (PA). Sort the results first by debut date—from most recent to ol
 */
 
 SELECT "first_name", "last_name", "debut" FROM players
-WHERE "bats" = 'R'
-ORDER BY "first_name", "last_name";
+WHERE "birth_country" = 'Pennsylvania';
