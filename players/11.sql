@@ -1,4 +1,7 @@
-/*
-Write a single SQL query to list the first and last names of all players of above average height, sorted tallest to shortest, then by first and last name.
-*/
-SELECT 
+SELECT
+    "first_name",
+    "last_name"
+FROM players
+WHERE "height" > 72.37
+ORDER BY "height" DESC, "first_name" ASC, "last_name" ASC;
+
