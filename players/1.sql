@@ -1,2 +1,2 @@
-SELECT "id", "first_name", "last_name" FROM players
-WHERE "first_name" LIKE 'Jackie%';
+SELECT "birth_city", "birth_state", "birth_country" FROM players
+WHERE CONCAT("first_name",' ',"last_name") = 'Jackie Robinson';
