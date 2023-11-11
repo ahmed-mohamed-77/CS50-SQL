@@ -1,5 +1,5 @@
 
-SELECT CONCAT("first_name", ' ',"last_name") AS "Player_Name", "final_game"
+SELECT "first_name" as "First Name", "last_name" AS "Last Name", "final_game"
 FROM players
 WHERE "weight" >= 200
-ORDER BY "Player_Name";
+ORDER BY "First Name";
