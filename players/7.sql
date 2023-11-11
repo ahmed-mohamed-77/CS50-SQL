@@ -1,6 +1,4 @@
-/*
-In 7.sql, write a SQL query to count the number of players who bat (or batted) right-handed and throw (or threw) left-handed, or vice versa.
-*/
-SELECT COUNT(*) , "bats", "throws" FROM players
-GROUP BY "bats"
-HAVING "bats" = 'R' AND "throws" = 'L';
+SELECT COUNT(*) AS "PlayerCount", "bats", "throws"
+FROM players
+WHERE ("bats" = 'R' AND "throws" = 'L') OR ("bats" = 'L' AND "throws" = 'R')
+GROUP BY "bats", "throws";
