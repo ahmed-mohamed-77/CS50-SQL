@@ -3,4 +3,4 @@ In 7.sql, write a SQL query to count the number of players who bat (or batted) r
 */
 SELECT COUNT(*) , "bats", "throws" FROM players
 GROUP BY "bats"
-HAVING "bats" = 'R' OR "throws" = 'L';
+HAVING "bats" = 'R' AND "throws" = 'L';
