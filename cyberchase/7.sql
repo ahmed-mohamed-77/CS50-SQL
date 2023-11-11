@@ -1,1 +1,2 @@
-SELECT "title", "topic" FROM episodes;
+SELECT "title", "topic" FROM episodes
+where "topic" like '%fractions%';
