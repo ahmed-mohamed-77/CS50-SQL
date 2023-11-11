@@ -3,4 +3,6 @@ write a SQL query to return the first name, last name, and debut date of players
 Pennsylvania (PA). Sort the results first by debut date—from most recent to oldest—then alphabetically by first name, followed by last name.
 */
 
-
+SELECT "first_name", "last_name", "debut" FROM players
+WHERE "bats" = 'R'
+ORDER BY "first_name", "last_name";
