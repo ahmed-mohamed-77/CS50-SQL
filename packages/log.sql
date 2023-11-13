@@ -63,6 +63,7 @@ WHERE package_id =(
     AND "to_address_id" = (
         SELECT "id" FROM addresses
         WHERE "address" = '728 Maple Place'
+    ORDER BY "timestamp" DESC
     )
 );
 
