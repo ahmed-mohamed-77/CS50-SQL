@@ -8,4 +8,4 @@ Massachusetts also recognizes charter schools, which (according to DESE!) are co
 SELECT * FROM schools;
 
 SELECT * FROM districts
-WHERE ;
+WHERE city = 'Massachusetts';
