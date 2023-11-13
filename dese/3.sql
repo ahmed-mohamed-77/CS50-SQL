@@ -9,4 +9,5 @@ You’ve been asked to find the average of this set of averages,
 weighting all districts equally regardless of their size.
 */
 
-SELECT * FROM  expenditures
+SELECT "per_pupil_expenditure" AS "Average District Per-Pupil Expenditure" FROM  expenditures
+
