@@ -8,3 +8,5 @@ per pupil, each district spent last year.
 You’ve been asked to find the average of this set of averages,
 weighting all districts equally regardless of their size.
 */
+
+SELECT 
