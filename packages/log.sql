@@ -8,7 +8,12 @@ SELECT * FROM addresses
 WHERE "address" LIKE '2 Fin%';
 
 SELECT * FROM packages
-WHERE "from_address_id" = 432 AND "to_address_id" = 854;
+WHERE "from_address_id" =(
+    SELECT  FROM addresses
+    WHERE "address" = '900 Somerville Avenue')
+AND "to_address_id" =
+    (SELECT * FROM addresses
+    WHERE "address" LIKE '2 Fin%');
 
 -- *** The Devious Delivery ***
 
