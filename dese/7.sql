@@ -1,2 +1,2 @@
-SELECT "name" FROM districts
-WHERE "	city" = 'Cambridge';
+SELECT "id" FROM districts
+WHERE "name" = 'Cambridge';
