@@ -67,7 +67,7 @@ WHERE package_id =(
 ORDER BY "timestamp" DESC
 LIMIT 1;
 
--- FIND THE DETAILS OF HOW HAS THE PACKAGE
+-- FIND THE NAME OF THE DRIVER HOW HAS THE PACKAGE
 
 SELECT * FROM drivers
 WHERE "id" = (
@@ -83,4 +83,5 @@ WHERE "id" = (
         )
     )
     ORDER BY "timestamp" DESC
-    LIMIT 1;
+    LIMIT 1
+);
