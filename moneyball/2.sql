@@ -1,10 +1,3 @@
-SELECT  ROUND(AVG(salary), 2) AS "average salary",	"year"
-FROM salaries AS S
-INNER JOIN players AS P ON P.id = S.player_id
-WHERE P.first_name = 'cal' AND P.last_name ='Ripken'
-GROUP BY "year"
-ORDER BY "year" DESC;
-
 SELECT "salary", "year"
 FROM salaries
 WHERE "player_id" =
