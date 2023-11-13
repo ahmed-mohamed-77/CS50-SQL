@@ -56,16 +56,16 @@ AND "to_address_id" = (
 SELECT * FROM scans
 WHERE package_id =(
         SELECT "id" FROM packages
-    WHERE "from_address_id" = (
-        SELECT "id" FROM addresses
-        WHERE "address" = '109 Tileston Street'
+        WHERE "from_address_id" = (
+            SELECT "id" FROM addresses
+            WHERE "address" = '109 Tileston Street')
+        AND "to_address_id" = (
+            SELECT "id" FROM addresses
+            WHERE "address" = '728 Maple Place'
     )
-    AND "to_address_id" = (
-        SELECT "id" FROM addresses
-        WHERE "address" = '728 Maple Place'
-    ORDER BY "timestamp" DESC
-    )
-);
+)
+ORDER BY "timestamp" DESC
+LIMIT 1;
 
 -- FIND THE DETAILS OF HOW HAS THE PACKAGE
 
@@ -73,12 +73,14 @@ SELECT * FROM drivers
 WHERE "id" = (
     SELECT "driver_id" FROM scans
     WHERE package_id =(
-        SELECT "id" FROM packages
-        WHERE "from_address_id" = (
-        SELECT "id" FROM addresses
-        WHERE "address" = '109 Tileston Street')
-    AND "to_address_id" = (
-        SELECT "id" FROM addresses
-        WHERE "address" = '728 Maple Place')
+            SELECT "id" FROM packages
+            WHERE "from_address_id" = (
+                SELECT "id" FROM addresses
+                WHERE "address" = '109 Tileston Street')
+            AND "to_address_id" = (
+                SELECT "id" FROM addresses
+                WHERE "address" = '728 Maple Place'
         )
-);
+    )
+    ORDER BY "timestamp" DESC
+    LIMIT 1;
