@@ -1,2 +1,2 @@
-SELECT * FROM districts
+SELECT name FROM districts
 WHERE "name" = 'Cambridge';
