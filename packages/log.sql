@@ -24,8 +24,11 @@ At what type of address did the Devious Delivery end up?:
 What were the contents of the Devious Delivery?:
 */
 
+SELECT * FROM packages
+WHERE "from_address_id" IS NULL;
+
 SELECT * FROM addresses
-WHERE "address" LIKE 'Fiftyv%';
+WHERE "id" = 50;
 
 -- *** The Forgotten Gift ***
 
