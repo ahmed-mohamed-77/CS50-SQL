@@ -1,5 +1,5 @@
-SELECT D.name, E.pupil FROM districts AS D
+SELECT D.name, E.pupils FROM districts AS D
 INNER JOIN expenditures AS E
 ON D.id = E.district_id
-ORDER BY E.pupil
+ORDER BY E.pupils
 LIMIT 1;
