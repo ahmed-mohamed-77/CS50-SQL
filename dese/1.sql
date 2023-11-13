@@ -5,3 +5,4 @@ write a SQL query to find the names and cities of all public schools in Massachu
 Keep in mind that not all schools in the schools table are considered traditional public schools.
 Massachusetts also recognizes charter schools, which (according to DESE!) are considered distinct.
 */
+SELECT * FROM schools;
