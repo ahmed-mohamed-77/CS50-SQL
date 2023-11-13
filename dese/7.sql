@@ -1,2 +1,2 @@
 SELECT "name" FROM schools
-WHERE 
+WHERE "name" LIKE '%Cambridge%';
