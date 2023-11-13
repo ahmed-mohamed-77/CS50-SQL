@@ -6,3 +6,6 @@ Keep in mind that not all schools in the schools table are considered traditiona
 Massachusetts also recognizes charter schools, which (according to DESE!) are considered distinct.
 */
 SELECT * FROM schools;
+
+SELECT * FROM districts
+WHERE ;
