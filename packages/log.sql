@@ -27,8 +27,13 @@ What were the contents of the Devious Delivery?:
 SELECT * FROM packages
 WHERE "from_address_id" IS NULL;
 
+SELECT * FROM scans
+WHERE "package_id" =
+    (SELECT "id" FROM packages
+    WHERE "from_address_id" IS NULL);
+
 SELECT * FROM addresses
-WHERE "id" = 50;
+WHERE "id" = 348;
 
 -- *** The Forgotten Gift ***
 
