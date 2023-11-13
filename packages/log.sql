@@ -19,10 +19,6 @@ WHERE "package_id" = (
 );
 
 -- *** The Devious Delivery ***
-/*
-At what type of address did the Devious Delivery end up?:
-What were the contents of the Devious Delivery?:
-*/
 
 SELECT * FROM packages
 WHERE "from_address_id" IS NULL;
@@ -36,4 +32,8 @@ SELECT * FROM addresses
 WHERE "id" = 348;
 
 -- *** The Forgotten Gift ***
+
+
+
+
 
