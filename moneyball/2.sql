@@ -5,7 +5,7 @@ WHERE P.first_name = 'cal' AND P.last_name ='Ripken'
 GROUP BY "year"
 ORDER BY "year" DESC;
 
-SELECT  ROUND(AVG(salary), 2) AS "average salary",	"year"
+SELECT "salary", "year"
 FROM salaries
 WHERE "player_id" =
     (SELECT id FROM players
