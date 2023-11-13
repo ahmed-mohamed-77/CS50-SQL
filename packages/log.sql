@@ -24,7 +24,8 @@ At what type of address did the Devious Delivery end up?:
 What were the contents of the Devious Delivery?:
 */
 
-
+SELECT * FROM addresses
+WHERE "address" LIKE 'Fiftyv%';
 
 -- *** The Forgotten Gift ***
 
