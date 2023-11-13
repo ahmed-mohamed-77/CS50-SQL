@@ -52,6 +52,7 @@ AND "to_address_id" = (
     WHERE "address" = '728 Maple Place'
 );
 
+-- TO TRACK DOWN THE PACKAGE AND KNOW HOW HAS IT
 SELECT * FROM scans
 WHERE package_id =(
         SELECT "id" FROM packages
@@ -63,4 +64,20 @@ WHERE package_id =(
         SELECT "id" FROM addresses
         WHERE "address" = '728 Maple Place'
     )
+);
+
+-- FIND THE DETAILS OF HOW HAS THE PACKAGE
+
+SELECT * FROM drivers
+WHERE "id" = (
+    SELECT "driver_id" FROM scans
+    WHERE package_id =(
+        SELECT "id" FROM packages
+        WHERE "from_address_id" = (
+        SELECT "id" FROM addresses
+        WHERE "address" = '109 Tileston Street')
+    AND "to_address_id" = (
+        SELECT "id" FROM addresses
+        WHERE "address" = '728 Maple Place')
+        )
 );
