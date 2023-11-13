@@ -5,7 +5,7 @@ SELECT * FROM "addresses"
 WHERE "address" = '900 Somerville Avenue';
 
 SELECT * FROM "addresses"
-WHERE "address" = '2 Finnegan Street, uptown';
+WHERE "address" LIKE '2 Fin%';
 
 -- *** The Devious Delivery ***
 
