@@ -1,1 +1,1 @@
-SELECT name, pupils, per_pupil_expenditure
+SELECT name, pupils, per_pupil_expenditure, graduated
