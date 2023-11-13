@@ -33,6 +33,12 @@ WHERE "id" = 348;
 
 -- *** The Forgotten Gift ***
 
+-- BOTH ADDRESSES CORRECT
+SELECT * FROM addresses
+WHERE "address" = '109 Tileston Street';
+
+SELECT * FROM addresses
+WHERE "address" = '728 Maple Place';
 
 
 
