@@ -1,11 +1,3 @@
-/*
-Your colleague is preparing a map of all public schools in Massachusetts. In 1.sql,
-write a SQL query to find the names and cities of all public schools in Massachusetts.
+SELECT "name", "city" FROM schools
+WHERE "state" = 'MA' AND "type" = 'Public School';
 
-Keep in mind that not all schools in the schools table are considered traditional public schools.
-Massachusetts also recognizes charter schools, which (according to DESE!) are considered distinct.
-*/
-SELECT * FROM schools;
-
-SELECT * FROM districts
-WHERE "name" = 'Massachusetts';
