@@ -1,4 +1,4 @@
-SELECT S.salary
+SELECT S.salary AS "the salary of the player"
 FROM players AS PL
 JOIN salaries AS S ON PL.id = S.player_id
 JOIN performances AS P ON PL.id = P.player_id
