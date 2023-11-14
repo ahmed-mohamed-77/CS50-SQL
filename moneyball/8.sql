@@ -6,3 +6,6 @@ WHERE P.H = (SELECT MAX(HR) FROM performances WHERE year = 2001)
   AND S.year = 2001
 ORDER BY S.salary DESC
 LIMIT 1;
+
+SELECT "salary" FROM salaries
+WHERE "player_id"
