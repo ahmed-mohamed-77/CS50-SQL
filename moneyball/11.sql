@@ -2,7 +2,7 @@ SELECT
     PL.first_name,
     PL.last_name,
     CASE
-        WHEN P.H > 0 THEN ROUND(S.salary / P.H, 2)
+        WHEN P.H > 0 THEN ROUND(S.salary / P.H, 0)
         ELSE NULL
     END AS "dollars per hit"
 FROM
