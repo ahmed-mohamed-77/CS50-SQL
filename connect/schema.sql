@@ -42,9 +42,13 @@ CREATE TABLE schools_users(
 
 CREATE TABLE companies_users(
     "id" INT NOT NULL,
-    "user_id"
-    ""
+    "user_id" INT NOT NULL,
+    "company_id" INT NOT NULL,
     "start_date" DATETIME NOT NULL,
     "end_date" DATETIME NOT NULL,
-    "degree" TEXT NOT NULL,
-)
+    "company_title" TEXT NOT NULL,
+
+    CONSTRAINT companiesuser_PK PRIMARY KEY ("id"),
+    CONSTRAINT companiesusers_users_FK FOREIGN KEY "user_id" REFERENCES "users"("id"),
+    CONSTRAINT companiesusers_company_FK FOREIGN KEY "company_id" REFERENCES "companies"("id"),
+);
