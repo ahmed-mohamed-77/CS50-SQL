@@ -27,6 +27,13 @@ CREATE TABLE companies(
     CONSTRAINT company_PK PRIMARY KEY("id")
 );
 
+CREATE TABLE users_connections(
+    "user1_id" INT NOT NULL,
+    "user2_id" INT NOT NULL,
+
+    CONSTRAINT users_connections_PK PRIMARY KEY ("user1_id", "user2_id")
+)
+
 CREATE TABLE schools_users(
     "id" INT NOT NULL,
     "user_id" INT NOT NULL,
