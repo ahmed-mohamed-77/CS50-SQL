@@ -18,3 +18,11 @@ CREATE TABLE schoolsanduniversities(
     CONSTRAINT schoolsanduniversities_PK PRIMARY KEY ("id")
 );
 
+CREATE TABLE companies(
+    "id" INT NOT NULL,
+    "name" TEXT NOT NULL,
+    "industry" TEXT NOT NULL,
+    "location" TEXT NOT NULL,
+
+    CONSTRAINT company_PK PRIMARY KEY("id")
+)
