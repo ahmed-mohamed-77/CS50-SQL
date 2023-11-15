@@ -18,5 +18,7 @@ CREATE TABLE check-ins(
     CONSTRAINT flight_check_FK FOREIGN KEY ("flight_id") REFERENCES ""("")
 );
 
-CREATE TABLE airlines
+CREATE TABLE airlines(
+    
+)
 
