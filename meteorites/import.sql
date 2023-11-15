@@ -2,9 +2,9 @@ CREATE TABLE meteorites(
     "id" INT,
     "name" TEXT NOT NULL,
     "class"
-    "mass"
-    "discovery" 
+    "mass" NUMERIC
+    "discovery"
     "year" INT
-    "lat" INT
-    "long" INT
+    "lat" ROUND(NUMERIC, 2)
+    "long" NUMERIC
 )
