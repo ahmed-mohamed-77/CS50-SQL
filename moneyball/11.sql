@@ -11,7 +11,7 @@ JOIN
 WHERE
     S.year = 2001 AND P.year = 2001 AND P.H > 0
 GROUP BY
-    PL.id, PL.last_name, S.salary,
+    PL.id, PL.last_name, S.salary
 ORDER BY
     "dollars per hit",
     P.first_name,
