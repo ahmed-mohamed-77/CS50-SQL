@@ -15,7 +15,7 @@ CREATE TABLE check-ins(
 
     CONSTRAINT check-ins_PK PRIMARY KEY (id),
     CONSTRAINT passenger_check_FK FOREIGN KEY ("passenger_id") REFERENCES "passengers"("id"),
-    CONSTRAINT flight_check_FK FOREIGN KEY ("flight_id") REFERENCES ""("")
+    CONSTRAINT flight_check_FK FOREIGN KEY ("flight_id") REFERENCES "flights"("id")
 );
 
 CREATE TABLE airlines(
@@ -28,5 +28,13 @@ CREATE TABLE airlines(
 
 CREATE TABLE flights(
     "id" INT NOT NULL,
-    
+    "flights_id" INT NOT NULL,
+    "airline_id" INT NOT NULL,
+    "from_airport_code" TEXT NOT NULL,
+    "to_airport_code" TEXT NOT NULL,
+    "departure" DATETIME NOT NULL,
+    "arrival" DATETIME NOT NULL,
+
+    CONSTRAINT flights_PK PRIMARY KEY ("id"),
+    CONSTRAINT flights_airline_FK FOREIGN KEY ("airline_id") REFERENCES "airlines"("id")
 )
