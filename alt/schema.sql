@@ -20,7 +20,13 @@ CREATE TABLE check-ins(
 
 CREATE TABLE airlines(
     "id" INT NOT NULL,
-    "airline" TEXT NOT NULL,
-    
+    "name" TEXT NOT NULL,
+    "concourse" TEXT NOT NULL,
+
+    CONSTRAINT airlines_PK PRIMARY KEY("id")
 );
 
+CREATE TABLE flights(
+    "id" INT NOT NULL,
+    
+)
