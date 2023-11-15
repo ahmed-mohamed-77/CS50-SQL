@@ -19,6 +19,8 @@ CREATE TABLE check-ins(
 );
 
 CREATE TABLE airlines(
+    "id" INT NOT NULL,
+    "airline" TEXT NOT NULL,
     
-)
+);
 
