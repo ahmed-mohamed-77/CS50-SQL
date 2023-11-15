@@ -5,6 +5,8 @@ CREATE TABLE meteorites(
     "mass" NUMERIC
     "discovery"
     "year" INT
-    "lat" ROUND(NUMERIC, 2)
-    "long" NUMERIC
+    "lat" NUMERIC(5, 2),
+    "long" NUMERIC(5, 2)
+
+    
 )
