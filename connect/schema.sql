@@ -8,4 +8,7 @@ CREATE TABLE users(
     CONSTRAINT user_PK PRIMARY KEY ("id")
 );
 
-
+CREATE TABLE schoolsanduniversities(
+    "id" INT NOT NULL,
+    
+);
