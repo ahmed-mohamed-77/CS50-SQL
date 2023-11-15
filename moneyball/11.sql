@@ -13,6 +13,8 @@ WHERE
 GROUP BY
     PL.id, PL.last_name, S.salary,
 ORDER BY
-    "dollars per hit"
+    "dollars per hit",
+    P.first_name,
+    P.last_name
 LIMIT 10;
 
