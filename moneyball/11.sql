@@ -8,9 +8,10 @@ JOIN
     salaries AS S ON PL.id = S.player_id
 JOIN
     performances AS P ON PL.id = P.player_id
-GROUP BY PL.id, PL.last_name, S.salary,
 WHERE
     S.year = 2001 AND P.year = 2001 AND P.H > 0
+GROUP BY
+    PL.id, PL.last_name, S.salary,
 ORDER BY
     "dollars per hit"
 LIMIT 10;
