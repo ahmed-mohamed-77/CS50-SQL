@@ -25,5 +25,10 @@ CREATE TABLE Orders(
 
 CREATE TABLE Customers(
     "id" INT,
-    ""
+    "first_name" TEXT NOT NULL,
+    "last_name" TEXT NOT NULL,
+    "order_id" INT,
+
+    CONSTRAINT Customers_PK PRIMARY KEY ("id"),
+    CONSTRAINT Customers_FK FOREIGN KEY ("order_id") REFERENCES "Orders"("id")
 );
