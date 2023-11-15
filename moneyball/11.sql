@@ -1,10 +1,7 @@
 SELECT
     PL.first_name,
     PL.last_name,
-    CASE
-        WHEN P.H > 0 THEN S.salary / P.H
-        ELSE NULL
-    END AS "dollars per hit"
+    S.salary / NULLIF(P.H, 0) AS "Dollars per Hit"
 FROM
     players AS PL
 JOIN
@@ -18,11 +15,3 @@ ORDER BY
     "dollars per hit"
 LIMIT 10;
 
-SELECT playerID AS "First Name", nameLast AS "Last Name",
-       salary / NULLIF(H AS "Dollars per Hit"
-FROM (SELECT playerID, nameLast, salary, SUM(H) AS H
-      FROM salaries JOIN batting ON salaries.playerID = batting.playerID AND salaries.yearID = batting.yearID
-      WHERE batting.yearID = 2001 AND H > 0
-      GROUP BY playerID, nameLast, salary)
-ORDER BY "Dollars per Hit" ASC, "First Name" ASC, "Last Name" ASC
-LIMIT 10;
