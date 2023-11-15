@@ -26,3 +26,14 @@ CREATE TABLE companies(
 
     CONSTRAINT company_PK PRIMARY KEY("id")
 );
+
+CREATE TABLE schools_users(
+    "id" INT NOT NULL,
+    "user_id" INT NOT NULL,
+    "start_date" DATETIME NOT NULL,
+    "end_date" DATETIME NOT NULL,
+    "type" TEXT NOT NULL,
+
+    CONSTRAINT schooluser_PK PRIMARY KEY ("id"),
+    CONSTRAINT schooluser_user_PK FOREIGN KEY ("user_id") REFERENCES "users"("id")
+)
