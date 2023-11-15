@@ -35,7 +35,7 @@ CREATE TABLE users_connections(
     CONSTRAINT users_connections_users_FK FOREIGN KEY ("user1_id") REFERENCES "users"("id"),
     CONSTRAINT users_connections_users_FK FOREIGN KEY ("user2_id") REFERENCES "users"("id")
 
-)
+);
 
 CREATE TABLE schools_users(
     "user_id" INT,
@@ -58,5 +58,5 @@ CREATE TABLE companies_users(
 
     CONSTRAINT companiesuser_PK PRIMARY KEY ("user_id", "company_id"),
     CONSTRAINT companiesusers_users_FK FOREIGN KEY "user_id" REFERENCES "users"("id"),
-    CONSTRAINT companiesusers_company_FK FOREIGN KEY "company_id" REFERENCES "companies"("id"),
+    CONSTRAINT companiesusers_company_FK FOREIGN KEY "company_id" REFERENCES "companies"("id")
 );
