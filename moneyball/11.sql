@@ -14,7 +14,7 @@ GROUP BY
     PL.id, PL.last_name, S.salary
 ORDER BY
     "dollars per hit",
-    P.first_name,
-    P.last_name
+    PL.first_name,
+    PL.last_name
 LIMIT 10;
 
