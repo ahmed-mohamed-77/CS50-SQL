@@ -8,7 +8,7 @@ CREATE TABLE users(
     CONSTRAINT user_PK PRIMARY KEY ("id")
 );
 
-CREATE TABLE schoolsanduniversities(
+CREATE TABLE schools(
     "id" INT NOT NULL,
     "name" TEXT NOT NULL UNIQUE,
     "type" TEXT NOT NULL,
