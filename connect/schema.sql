@@ -31,7 +31,10 @@ CREATE TABLE users_connections(
     "user1_id" INT NOT NULL,
     "user2_id" INT NOT NULL,
 
-    CONSTRAINT users_connections_PK PRIMARY KEY ("user1_id", "user2_id")
+    CONSTRAINT users_connections_PK PRIMARY KEY ("user1_id", "user2_id"),
+    CONSTRAINT users_connections_users_FK FOREIGN KEY ("user1_id") REFERENCES "users"("id"),
+    CONSTRAINT users_connections_users_FK FOREIGN KEY ("user2_id") REFERENCES "users"("id")
+
 )
 
 CREATE TABLE schools_users(
