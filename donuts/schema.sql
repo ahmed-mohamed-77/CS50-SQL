@@ -22,3 +22,8 @@ CREATE TABLE Orders(
     "id" INT
     ""
 );
+
+CREATE TABLE Customers(
+    "id" INT,
+    ""
+);
