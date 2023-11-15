@@ -7,7 +7,7 @@ CREATE TABLE passengers(
     CONSTRAINT passinger_PK PRIMARY KEY ("id")
 );
 
-CREATE TABLE check-ins(
+CREATE TABLE checkIns(
     "id" INT NOT NULL,
     "passenger_id" BIG INT NOT NULL,
     "datetime" DATETIME NOT NULL,
