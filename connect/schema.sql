@@ -39,7 +39,7 @@ CREATE TABLE users_connections(
 
 CREATE TABLE schools_users(
     "user_id" INT,
-    "school_id" INT
+    "school_id" INT,
     "start_date" DATE NOT NULL,
     "end_date" DATE NOT NULL,
     "degree" TEXT NOT NULL,
