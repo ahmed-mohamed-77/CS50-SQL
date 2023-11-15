@@ -10,5 +10,10 @@ CREATE TABLE users(
 
 CREATE TABLE schoolsanduniversities(
     "id" INT NOT NULL,
-    
+    "name" TEXT NOT NULL UNIQUE,
+    "type" TEXT NOT NULL,
+    "location" TEXT NOT NULL,
+    "year" INT NOT NULL,
+
+    CONSTRAINT schoolsanduniversities_PK PRIMARY KEY ("id")
 );
