@@ -15,7 +15,7 @@ CREATE TABLE schools(
     "location" TEXT NOT NULL,
     "year" INT NOT NULL,
 
-    CONSTRAINT schoolsanduniversities_PK PRIMARY KEY ("id")
+    CONSTRAINT school_PK PRIMARY KEY ("id")
 );
 
 CREATE TABLE companies(
@@ -25,4 +25,4 @@ CREATE TABLE companies(
     "location" TEXT NOT NULL,
 
     CONSTRAINT company_PK PRIMARY KEY("id")
-)
+);
