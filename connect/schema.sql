@@ -2,6 +2,10 @@ CREATE TABLE users(
     "id" INT NOT NULL,
     "first_name" TEXT NOT NULL,
     "Last_name" TEXT NOT NULL,
-    "username" TEXT NOT NULL,
-    "password" T
+    "username" TEXT NOT NULL UNIQUE,
+    "password" TEXT NOT NULL,
+
+    CONSTRAINT user_PK PRIMARY KEY ("id")
 );
+
+
