@@ -20,7 +20,12 @@ CREATE TABLE Donuts(
 
 CREATE TABLE Orders(
     "id" INT
-    ""
+    "order_number" TEXT NOT NULL,
+    "customer_id" INT,
+    "date" DATE NOT NULL,
+
+    CONSTRAINT orders_PK PRIMARY KEY ("id"),
+    CONSTRAINT orders_FK FOREIGN KEY ("customer_id") REFERENCES "Customers"("id")
 );
 
 CREATE TABLE Customers(
