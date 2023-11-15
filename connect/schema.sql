@@ -17,3 +17,4 @@ CREATE TABLE schoolsanduniversities(
 
     CONSTRAINT schoolsanduniversities_PK PRIMARY KEY ("id")
 );
+
