@@ -3,8 +3,8 @@ CREATE TABLE meteorites(
     "name" TEXT NOT NULL,
     "class"
     "mass"
-    "discovery"
-    "year" 
+    "discovery" 
+    "year" INT
     "lat" INT
     "long" INT
 )
