@@ -37,4 +37,4 @@ CREATE TABLE flights(
 
     CONSTRAINT flights_PK PRIMARY KEY ("id"),
     CONSTRAINT flights_airline_FK FOREIGN KEY ("airline_id") REFERENCES "airlines"("id")
-)
+);
