@@ -30,10 +30,12 @@ CREATE TABLE companies(
 CREATE TABLE schools_users(
     "id" INT NOT NULL,
     "user_id" INT NOT NULL,
+    "school_id" INT NOT NULL
     "start_date" DATETIME NOT NULL,
     "end_date" DATETIME NOT NULL,
     "degree" TEXT NOT NULL,
 
     CONSTRAINT schooluser_PK PRIMARY KEY ("id"),
-    CONSTRAINT schooluser_user_PK FOREIGN KEY ("user_id") REFERENCES "users"("id")
+    CONSTRAINT schooluser_user_PK FOREIGN KEY ("user_id") REFERENCES "users"("id"),
+    CONSTRAINT schooluser_school_PK FOREIGN KEY ("school_id") REFERENCES "schools"("id")
 );
