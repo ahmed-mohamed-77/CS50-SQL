@@ -8,7 +8,7 @@ LIMIT 10;
 SELECT
     PL.first_name,
     PL.last_name,
-    S.salary / NULLIF(P.H, 0) AS "Dollars per Hit"
+    S.salary / NULLIF(P.H, 0) AS "salary_per_rbi"
 FROM
     players AS PL
 JOIN
@@ -16,11 +16,13 @@ JOIN
 JOIN
     performances AS P ON PL.id = P.player_id
 WHERE
-    S.year = 2001 AND P.year = 2001 AND P.H > 0
-GROUP BY
-    PL.id, PL.last_name, S.salary
+  s.year = 2001
+  AND P.year = 2001
+  AND P.rbi > 0
 ORDER BY
-    "dollars per hit",
-    PL.first_name,
-    PL.last_name
-LIMIT 10;
+  "salary_per_rbi" ASC,
+  PL.last_name ASC,
+  PL.first_name ASC
+LIMIT
+  10;
+
