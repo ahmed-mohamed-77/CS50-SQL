@@ -11,9 +11,9 @@ CREATE TABLE users(
 CREATE TABLE schools(
     "id" INT NOT NULL,
     "name" TEXT NOT NULL UNIQUE,
-    "type" TEXT NOT NULL,
+    "school_type" TEXT NOT NULL,
     "location" TEXT NOT NULL,
-    "year" INT NOT NULL,
+    "founded_year" INT NOT NULL,
 
     CONSTRAINT school_PK PRIMARY KEY ("id")
 );
@@ -32,8 +32,8 @@ CREATE TABLE schools_users(
     "user_id" INT NOT NULL,
     "start_date" DATETIME NOT NULL,
     "end_date" DATETIME NOT NULL,
-    "type" TEXT NOT NULL,
+    "degree" TEXT NOT NULL,
 
     CONSTRAINT schooluser_PK PRIMARY KEY ("id"),
     CONSTRAINT schooluser_user_PK FOREIGN KEY ("user_id") REFERENCES "users"("id")
-)
+);
