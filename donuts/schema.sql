@@ -17,3 +17,8 @@ CREATE TABLE Donuts(
     CONSTRAINT Donuts_PK PRIMARY KEY("id"),
     CONSTRAINT Ingredients_FK FOREIGN KEY("ingredients_id") REFERENCES "Ingredients"("id")
 );
+
+CREATE TABLE Orders(
+    "id" INT
+    ""
+);
