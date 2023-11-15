@@ -11,6 +11,8 @@ CREATE TABLE check-ins(
     "id" INT NOT NULL,
     "passenger_id" BIG INT NOT NULL,
     "datetime" DATETIME NOT NULL,
-    
+    "flight_id" BIG INT NOT NULL
 )
+
+
 
