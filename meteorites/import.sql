@@ -1,4 +1,5 @@
 CREATE TABLE meteorites(
     "id" INT,
-    "name" TEXT 
+    "name" TEXT NOT NULL,
+    "class" 
 )
