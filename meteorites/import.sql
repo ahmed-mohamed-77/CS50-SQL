@@ -1,16 +1,4 @@
-CREATE TABLE meteorites(
-    "id" INT,
-    "name" TEXT NOT NULL,
-    "class" TEXT,
-    "mass" NUMERIC(10, 2),
-    "discovery" TEXT NOT NULL CHECK ("discovery" IN ('Fell', 'Found')),
-    "year" INT,
-    "lat" NUMERIC(10, 2),
-    "long" NUMERIC(10, 2),
-
-    CONSTRAINT meteorites_PK PRIMARY KEY ("id")
-);
-
+-- create temp table for inserting
 CREATE TABLE meteorites_temp(
     "name" TEXT,
     "id" INT,
@@ -22,3 +10,11 @@ CREATE TABLE meteorites_temp(
     "lat" NUMERIC,
     "long" NUMERIC
 );
+
+
+-- import csv file to the temp table
+.mode csv
+.import --csv --skip 1 meteorites.csv meteorites_temp
+
+--round up decimals
+u
