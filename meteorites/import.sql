@@ -60,3 +60,6 @@ ERRORS -->
 :( "meteorites" table properly sorts elements and assigns IDs
     expected "1, Apache Junc...", not "1, 1880, Aache..."
 */
+
+SELECT * FROM meteorites_temp
+WHERE  "year" = 1980;
