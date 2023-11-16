@@ -50,4 +50,4 @@ ORDER BY "id" ASC ,"name" ASC, "year" ASC;
 
 -- DELETE THE TEMP TABLE
 
-DROP T
+DROP TABLE "meteorites_temp";
