@@ -28,19 +28,6 @@ UPDATE meteorites_temp SET "lat" = NULL WHERE "lat" = '';
 UPDATE meteorites_temp SET "long" = NULL WHERE "long" = '';
 
 -- create the meteorites table
-CREATE TABLE meteorites(
-    "id" INTEGER,
-    "name" TEXT,
-    "class" TEXT,
-    "mass" NUMERIC,
-    "discovery" TEXT,
-    "year" INTEGER,
-    "lat" NUMERIC,
-    "long" NUMERIC,
-
-    CONSTRAINT meteorites_PK PRIMARY KEY "id"
-);
-
 
 CREATE TABLE meteorites(
     "id" INTEGER,
@@ -53,3 +40,9 @@ CREATE TABLE meteorites(
     "long" NUMERIC,
     CONSTRAINT meteorites_PK PRIMARY KEY ("id")
 );
+
+INSERT INTO meteorites (
+    "id", "name", "class", "mass", "discovery", "year", "lat", "long")
+SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
+FROM meteorites_temp
+ORDER BY "id";
