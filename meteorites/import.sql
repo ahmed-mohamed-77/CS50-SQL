@@ -42,3 +42,14 @@ CREATE TABLE meteorites(
 );
 
 
+CREATE TABLE meteorites(
+    "id" INTEGER,
+    "name" TEXT,
+    "class" TEXT,
+    "mass" NUMERIC,
+    "discovery" TEXT,
+    "year" INTEGER,
+    "lat" NUMERIC,
+    "long" NUMERIC,
+    CONSTRAINT meteorites_PK PRIMARY KEY ("id")
+);
