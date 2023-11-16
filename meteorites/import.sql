@@ -17,11 +17,10 @@ CREATE TABLE "meteorites_temp" (
     "nametype" TEXT,
     "class" TEXT,
     "mass" NUMERIC(10, 2),
-    "discovery",
+    "discovery" TEXT,
     "year" INT,
     "lat" NUMERIC(10, 2),
     "long" NUMERIC(10, 2)
-
 );
 
 
