@@ -10,3 +10,7 @@ CREATE TABLE meteorites(
 
     CONSTRAINT meteorites_PK PRIMARY KEY ("id")
 );
+
+INSERT INTO meteorites
+    ("id","name","class","mass""discovery","year" ,"lat""long")
+    
