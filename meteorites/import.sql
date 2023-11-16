@@ -17,13 +17,13 @@ CREATE TABLE meteorites_temp(
 .import --csv --skip 1 meteorites.csv meteorites_temp
 
 -- round up decimals
-UPDATE TABLE meteorites_temp SET "mass" = ROUND("mass", 2);
-UPDATE TABLE meteorites_temp SET "lat" = ROUND("lat", 2);
-UPDATE TABLE meteorites_temp SET "long" = ROUND("long", 2);
+UPDATE meteorites_temp SET "mass" = ROUND("mass", 2);
+UPDATE meteorites_temp SET "lat" = ROUND("lat", 2);
+UPDATE meteorites_temp SET "long" = ROUND("long", 2);
 
 -- Replace empty values with NULL
-UPDATE TABLE meteorites_temp SET "mass" = 
-UPDATE TABLE meteorites_temp SET "year" = 
-UPDATE TABLE meteorites_temp SET "lat" = 
-UPDATE TABLE meteorites_temp SET "long" = 
+UPDATE meteorites_temp SET "mass" = NULL WHERE "mass" = '';
+UPDATE meteorites_temp SET "year" = NULL WHERE "year" = '';
+UPDATE meteorites_temp SET "lat" = NULL WHERE "lat" = '';
+UPDATE meteorites_temp SET "long" = NULL WHERE "long" = '';
 
