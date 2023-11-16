@@ -27,6 +27,9 @@ UPDATE meteorites_temp SET "year" = NULL WHERE "year" = '';
 UPDATE meteorites_temp SET "lat" = NULL WHERE "lat" = '';
 UPDATE meteorites_temp SET "long" = NULL WHERE "long" = '';
 
+--DELETE FROM TEMP TABLE
+DELETE FROM meteorites_temp WHERE "nametype" = 'Relict';
+
 -- create the meteorites table
 
 CREATE TABLE meteorites(
@@ -52,15 +55,3 @@ ORDER BY "name" ASC, "year" ASC;
 
 DROP TABLE "meteorites_temp";
 
-
-/*
-ERRORS -->
-:( no meteorites of type "relict" found in "meteorites" table
-    Found relict meteorite Brunflo from 1980
-:( "meteorites" table properly sorts elements and assigns IDs
-    expected "1, Apache Junc...", not "1, 1880, Aache..."
-*/
-
-SELECT * FROM meteorites_temp
-WHERE
-"year" = 1980 AND "nametype" = 'Relict';
