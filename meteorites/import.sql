@@ -12,8 +12,7 @@ CREATE TABLE meteorites(
 );
 
 INSERT INTO meteorites
-    ("id","name","class","mass", "discovery","year" ,"lat""long")
-SELECT "id", "name","class" ,"mass" ,"discovery" ,"year" ,"lat" ,"long"
+    ("id","name","class","mass", "discovery","year" ,"lat", "long")
+SELECT "id", "name","class" ,"mass" ,"discovery" ,"year" ,"lat" ,"long" FROM collections;
 
-  "nametype" ,
 
