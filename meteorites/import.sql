@@ -46,8 +46,8 @@ CREATE TABLE meteorites(
 
 -- INSERT INTO meteorites TABLE AND SORT IT
 INSERT INTO meteorites (
-    "id", "name", "class", "mass", "discovery", "year", "lat", "long")
-SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
+     "name", "class", "mass", "discovery", "year", "lat", "long")
+SELECT  "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM meteorites_temp
 ORDER BY "name" ASC, "year" ASC;
 
