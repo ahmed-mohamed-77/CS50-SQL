@@ -17,4 +17,5 @@ CREATE TABLE meteorites_temp(
 .import --csv --skip 1 meteorites.csv meteorites_temp
 
 --round up decimals
-u
+UPDATE TABLE meteorites_temp
+SET 
