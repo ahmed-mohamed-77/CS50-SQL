@@ -22,18 +22,3 @@ CREATE TABLE meteorites_temp(
     "lat" NUMERIC,
     "long" NUMERIC
 );
-
-
-INSERT INTO meteorites (
-    "id", "name", "class", "mass", "discovery", "year", "lat", "long")
-SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
-FROM meteorites_temp
-ORDER BY ;
-
-UPDATE meteorites_temp
-SET "mass" = 0
-WHERE "mass" is null;
-
-UPDATE meteorites_temp
-SET "mass" = 0
-WHERE "mass" ='';
