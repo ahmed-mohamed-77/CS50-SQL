@@ -62,4 +62,5 @@ ERRORS -->
 */
 
 SELECT * FROM meteorites_temp
-WHERE  "year" = 1980;
+WHERE
+"year" = 1980 AND "nametype" = 'Relict';
