@@ -30,6 +30,6 @@ SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM meteorites_temp;
 
 UPDATE meteorites_temp
-SET "mass" = ...
-WHERE ...
+SET "mass" = 0
+WHERE "mass" is null;
 
