@@ -24,3 +24,8 @@ CREATE TABLE "meteorites_temp" (
 );
 
 
+INSERT INTO meteorites (
+    "id", "name", "class", "mass", "discovery", "year", "lat", "long")
+SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
+FROM meteorites_temp;
+
