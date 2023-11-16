@@ -11,7 +11,7 @@ CREATE TABLE meteorites(
     CONSTRAINT meteorites_PK PRIMARY KEY ("id")
 );
 
-CREATE TABLE "meteorites_temp" (
+CREATE TABLE meteorites_temp (
     "name" TEXT,
     "id" INT,
     "nametype" TEXT,
@@ -29,3 +29,6 @@ INSERT INTO meteorites (
 SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM meteorites_temp;
 
+UPDATE meteorites_temp
+SET "mass" = ...
+WHERE ...
