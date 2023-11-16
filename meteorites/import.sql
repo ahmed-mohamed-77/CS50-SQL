@@ -28,11 +28,11 @@ UPDATE meteorites_temp SET "lat" = NULL WHERE "lat" = '';
 UPDATE meteorites_temp SET "long" = NULL WHERE "long" = '';
 
 -- create the meteorites table
-CREATE TABLE "meteorites" (
+CREATE TABLE meteorites(
     "id" INTEGER,
     "name" TEXT,
     "class" TEXT,
-    "mass" FLOAT,
+    "mass" NUMERIC,
     "discovery" TEXT,
     "year" INTEGER,
     "lat" NUMERIC,
