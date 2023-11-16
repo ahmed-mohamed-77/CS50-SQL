@@ -33,3 +33,6 @@ UPDATE meteorites_temp
 SET "mass" = 0
 WHERE "mass" is null;
 
+UPDATE meteorites_temp
+SET "mass" = 0
+WHERE "mass" ='';
