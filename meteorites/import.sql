@@ -41,8 +41,13 @@ CREATE TABLE meteorites(
     CONSTRAINT meteorites_PK PRIMARY KEY ("id")
 );
 
+-- INSERT INTO meteorites TABLE AND SORT IT
 INSERT INTO meteorites (
     "id", "name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM meteorites_temp
 ORDER BY "id" ASC ,"name" ASC, "year" ASC;
+
+-- DELETE THE TEMP TABLE
+
+DROP T
