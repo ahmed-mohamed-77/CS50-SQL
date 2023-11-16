@@ -12,7 +12,16 @@ CREATE TABLE meteorites(
 );
 
 CREATE TABLE "meteorites_temp" (
-    -- TODO
+    "name" TEXT,
+    "id" INT,
+    "nametype" TEXT,
+    "class" TEXT,
+    "mass" NUMERIC(10, 2),
+    "discovery",
+    "year" INT,
+    "lat" NUMERIC(10, 2),
+    "long" NUMERIC(10, 2)
+
 );
 
 
