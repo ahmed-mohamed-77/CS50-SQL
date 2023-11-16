@@ -27,7 +27,8 @@ CREATE TABLE meteorites_temp(
 INSERT INTO meteorites (
     "id", "name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
-FROM meteorites_temp;
+FROM meteorites_temp
+ORDER BY ;
 
 UPDATE meteorites_temp
 SET "mass" = 0
