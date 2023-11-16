@@ -51,3 +51,12 @@ ORDER BY "id" ASC ,"name" ASC, "year" ASC;
 -- DELETE THE TEMP TABLE
 
 DROP TABLE "meteorites_temp";
+
+
+/*
+ERRORS -->
+:( no meteorites of type "relict" found in "meteorites" table
+    Found relict meteorite Brunflo from 1980
+:( "meteorites" table properly sorts elements and assigns IDs
+    expected "1, Apache Junc...", not "1, 1880, Aache..."
+*/
