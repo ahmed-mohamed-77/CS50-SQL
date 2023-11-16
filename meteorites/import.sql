@@ -33,6 +33,3 @@ UPDATE meteorites_temp
 SET "mass" = ...
 WHERE ...
 
-
-ALTER TABLE meteorites_temp
-ALTER COLUMN "mass" SET DATA TYPE FLOAT;
