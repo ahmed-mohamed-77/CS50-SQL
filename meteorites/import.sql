@@ -45,4 +45,4 @@ INSERT INTO meteorites (
     "id", "name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM meteorites_temp
-ORDER BY "id";
+ORDER BY "id" ASC ,"name" ASC, "year" ASC;
