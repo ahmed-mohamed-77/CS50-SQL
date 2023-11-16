@@ -10,3 +10,9 @@ CREATE TABLE meteorites(
 
     CONSTRAINT meteorites_PK PRIMARY KEY ("id")
 );
+
+CREATE TABLE "meteorites_temp" (
+    -- TODO
+);
+
+
