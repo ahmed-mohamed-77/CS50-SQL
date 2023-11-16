@@ -49,14 +49,9 @@ INSERT INTO meteorites (
      "name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT  "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM meteorites_temp
-ORDER BY "name" ASC, "year" ASC;
+ORDER BY  "year" ASC, "name" ASC;
 
 -- DELETE THE TEMP TABLE
 
 DROP TABLE "meteorites_temp";
 
-INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
-SELECT
-    "name", "class", "mass", "discovery", "year", "lat", "long",
-    ROW_NUMBER() OVER (ORDER BY "year" ASC, "name" ASC) AS new_id
-FROM "meteorites_temp";
