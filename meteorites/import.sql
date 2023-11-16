@@ -11,7 +11,7 @@ CREATE TABLE meteorites(
     CONSTRAINT meteorites_PK PRIMARY KEY ("id")
 );
 
-CREATE TABLE meteorites_temp (
+CREATE TABLE meteorites_temp(
     "name" TEXT,
     "id" INT,
     "nametype" TEXT,
