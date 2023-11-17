@@ -11,5 +11,5 @@ WHERE "id" IN (
 );
 
 
-SELECT title FROM movies
-WHERE title LIKE '%Toy Story%';
+SELECT name FROM movies
+JOIN 
