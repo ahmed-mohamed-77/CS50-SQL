@@ -1,15 +1,4 @@
-/*In 8.sql, write a SQL query to list the names of all people who starred in Toy Story.
-Your query should output a table with a single column for the name of each person.
-You may assume that there is only one movie in the database with the title Toy Story.*/
-
-SELECT "name" FROM people
-WHERE "id" IN (
-    SELECT "person_id" FROM stars)
-    AND "movie_id" = (
-        SELECT "id" FROM movies
-        WHERE "title" = 'Toy Story'
-);
-
-
-SELECT name FROM movies
-JOIN 
+SELECT P.name FROM movies AS M
+JOIN stars AS S ON M.id = S.movie_id
+JOIN people AS P ON P.id = S.person_id
+WHERE M.title = 'Toy Story';
