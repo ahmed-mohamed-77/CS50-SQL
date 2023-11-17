@@ -12,3 +12,6 @@ each of their interview transcripts mentions the bakery.
 
 SELECT * FROM  bakery_security_logs
 WHERE "month" = 7 AND "day" = 28 AND "hour" = 10 AND "minute" = 15;
+
+SELECT * FROM interviews
+WHERE 	"month" = 7 AND	"day" = 28 AND "transcript" LIKE '%the bakery%';
