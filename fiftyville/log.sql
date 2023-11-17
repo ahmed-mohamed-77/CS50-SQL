@@ -105,7 +105,16 @@ SELECT * FROM bank_accounts AS BA
 JOIN people AS P ON BA.person_id =P.id
 WHERE "account_number" = '49610011';
 
+-- The city the thief ESCAPED TO:
 SELECT city  FROM airports
 WHERE "id" = (
-    SELECT origin_airport_id FROM flights
-)
+    SELECT destination_airport_id FROM flights
+    WHERE "year" = 2021 AND  "month" = 7 AND "day" = 29
+    AND "origin_airport_id" = (
+        SELECT city FROM airports
+        WHERE city = 'airports'
+    )
+    ORDER BY "hour", "minute"
+    LIMIT 1
+);
+
