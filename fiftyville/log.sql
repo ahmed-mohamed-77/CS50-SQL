@@ -67,3 +67,5 @@ AND "caller" = '(286) 555-6063';
 -- All flights in 29/7
 SELECT * FROM flights
 WHERE "month" = 7 AND "day" = 29 AND "hour" < 12;
+
+
