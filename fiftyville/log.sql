@@ -31,25 +31,25 @@ WHERE "month" = 7 AND "day" = 28 AND "hour" = 10 and "minute" BETWEEN 16 AND 35
 SELECT * FROM flights
 WHERE "month" = 7 AND "day" = 29;
 
-/*TARGET (RECIVER = (375) 555-8161))*/
+/*TARGET (RECIVER = (375) 555-8161 AND RECIVER NAME = Robin)*/
 -- FIRST license_plate is passport_number = 5773159633 ,phone_number is (367) 555-5533
 -- and name is Bruce
 SELECT * FROM people
 WHERE "license_plate" = '94KL13X';
 
-/*TARGET (RECIVER = (996) 555-8899)*/
+/*TARGET (RECIVER = (996) 555-8899 AND RECIVER NAME = Jack)*/
 -- FIRST license_plate is passport_number = 1695452385 ,phone_number is (130) 555-0289
 -- and name is Sofia
 SELECT * FROM people
 WHERE "license_plate" = 'G412CB7';
 
-/*TARGET = (725) 555-3243*/
+/*TARGET = (725) 555-3243  AND RECIVER NAME = Philip*/
 -- FIRST license_plate is passport_number = 3592750733 ,phone_number is (770) 555-1861
 -- and name is Diana
 SELECT * FROM people
 WHERE "license_plate" = '322W7JE';
 
-/*TARGET (RECIVER = (676) 555-6554)*/
+/*TARGET (RECIVER = (676) 555-6554  AND RECIVER NAME = James)*/
 -- FIRST license_plate is passport_number = 1988161715 ,phone_number is (286) 555-6063
 -- and name is Taylor
 SELECT * FROM people
@@ -68,4 +68,6 @@ AND "caller" = '(286) 555-6063';
 SELECT * FROM flights
 WHERE "month" = 7 AND "day" = 29 AND "hour" < 12;
 
-
+-- IDENTIFY THE RECIVER
+SELECT * FROM  people
+WHERE "phone_number" = '(676) 555-6554';
