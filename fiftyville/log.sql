@@ -22,8 +22,10 @@ they called someone who talked to them for less than a minute. In the call, I he
 take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ...
 */
 
-SELECT * FROM bakery_security_logs
-WHERE month	day	hour	minute	activity
+--Select the time frame
+SELECT * FROM  bakery_security_logs
+WHERE "month" = 7 AND "day" = 28 AND "hour" = 10 and "minute" BETWEEN 16 AND 35
+    AND"activity" = 'exit';
 
 -- All flights in 29/7
 SELECT * FROM flights
