@@ -78,3 +78,9 @@ AND "passport_number" IN ('5773159633', '1695452385', '1988161715');
 
 SELECT DISTINCT atm_location FROM  atm_transactions
 WHERE "month" = 7 AND "day" BETWEEN 28 AND 29;
+/*I don't know the thief's name, but it was someone I recognized.
+Earlier this morning, before I arrived at Emma's bakery,
+I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.*/
+
+SELECT * FROM  atm_transactions
+WHERE "month" = 7 AND "day" = 28;
