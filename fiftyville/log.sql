@@ -74,3 +74,7 @@ SELECT * FROM flights AS F
 JOIN passengers AS P ON F.id = P.flight_id
 WHERE "month" = 7 AND "day" = 29 AND "hour" < 12
 AND "passport_number" IN ('5773159633', '1695452385', '1988161715');
+
+
+SELECT DISTINCT atm_location FROM  atm_transactions
+WHERE "month" = 7 AND "day" BETWEEN 28 AND 29;
