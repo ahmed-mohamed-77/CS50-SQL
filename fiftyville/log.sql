@@ -43,12 +43,6 @@ WHERE "license_plate" = '94KL13X';
 SELECT * FROM people
 WHERE "license_plate" = 'G412CB7';
 
-/*TARGET = (725) 555-3243  AND RECIVER NAME = Philip*/
--- FIRST license_plate is passport_number = 3592750733 ,phone_number is (770) 555-1861
--- and name is Diana
-SELECT * FROM people
-WHERE "license_plate" = '322W7JE';
-
 /*TARGET (RECIVER = (676) 555-6554  AND RECIVER NAME = James)*/
 -- FIRST license_plate is passport_number = 1988161715 ,phone_number is (286) 555-6063
 -- and name is Taylor
@@ -79,4 +73,4 @@ WHERE "month" = 7 AND "day" = 29 AND "hour" < 12;
 SELECT * FROM flights AS F
 JOIN passengers AS P ON F.id = P.flight_id
 WHERE "month" = 7 AND "day" = 29 AND "hour" < 12
-AND "passport_number" = '1988161715';
+AND "passport_number" IN ('5773159633', '1695452385', '1988161715');

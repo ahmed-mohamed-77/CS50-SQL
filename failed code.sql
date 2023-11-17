@@ -95,3 +95,9 @@ WHERE "license_plate" = 'L93JTIZ';
 -- and name is Kelsey
 SELECT * FROM people
 WHERE "license_plate" = '0NTHK55';
+
+/*TARGET = (725) 555-3243  AND RECIVER NAME = Philip*/
+-- FIRST license_plate is passport_number = 3592750733 ,phone_number is (770) 555-1861
+-- and name is Diana
+SELECT * FROM people
+WHERE "license_plate" = '322W7JE';
