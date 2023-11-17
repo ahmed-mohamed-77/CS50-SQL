@@ -31,36 +31,42 @@ WHERE "month" = 7 AND "day" = 28 AND "hour" = 10 and "minute" BETWEEN 16 AND 35
 SELECT * FROM flights
 WHERE "month" = 7 AND "day" = 29 ;
 
+/*OUT*/
 -- FIRST license_plate is passport_number = 2963008352 ,phone_number is (725) 555-4692
 -- and name is Vanessa
 SELECT * FROM people
 WHERE "license_plate" = '5P2BI95';
 
+/*TARGET (RECIVER = (375) 555-8161))*/
 -- FIRST license_plate is passport_number = 5773159633 ,phone_number is (367) 555-5533
 -- and name is Bruce
 SELECT * FROM people
 WHERE "license_plate" = '94KL13X';
-
+/*OUT*/
 -- FIRST license_plate is passport_number = 7526138472 ,phone_number is (301) 555-4174
 -- and name is Barry
 SELECT * FROM people
 WHERE "license_plate" = '6P58WS2';
-
+/*OUT*/
 -- FIRST license_plate is passport_number = 8496433585 ,phone_number is (389) 555-5198
 -- and name is Luca
 SELECT * FROM people
 WHERE "license_plate" = '4328GD8';
 
+/*TARGET (RECIVER = (996) 555-8899)*/
 -- FIRST license_plate is passport_number = 1695452385 ,phone_number is (130) 555-0289
 -- and name is Sofia
 SELECT * FROM people
 WHERE "license_plate" = 'G412CB7';
 
+/*OUT*/
 -- FIRST license_plate is passport_number = 7049073643 ,phone_number is (829) 555-5269
 -- and name is Iman
 SELECT * FROM people
 WHERE "license_plate" = 'L93JTIZ';
 
+
+/*TARGET = (725) 555-3243*/
 -- FIRST license_plate is passport_number = 3592750733 ,phone_number is (770) 555-1861
 -- and name is Diana
 SELECT * FROM people
@@ -82,4 +88,4 @@ WHERE "month" = 7 AND "day" = 28 AND "duration" < 60;
 
 SELECT * FROM phone_calls
 WHERE "month" = 7 AND "day" = 28 AND "duration" < 60
-AND "caller" = '(725) 555-4692';
+AND "caller" = '(499) 555-9472';
