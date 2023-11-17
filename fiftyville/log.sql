@@ -71,3 +71,8 @@ WHERE "month" = 7 AND "day" = 29 AND "hour" < 12;
 -- IDENTIFY THE RECIVER
 SELECT * FROM  people
 WHERE "phone_number" = '(676) 555-6554';
+
+SELECT * FROM flights AS F
+JOIN passengers AS P ON F.id = P.flight_id
+WHERE "month" = 7 AND "day" = 29 AND "hour" < 12;
+
