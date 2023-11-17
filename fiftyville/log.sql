@@ -75,3 +75,6 @@ WHERE "license_plate" = '0NTHK55';
 -- and name is Taylor
 SELECT * FROM people
 WHERE "license_plate" = '1106N58';
+
+SELECT * FROM phone_calls
+WHERE "month" = 7 AND "day" = 28;
