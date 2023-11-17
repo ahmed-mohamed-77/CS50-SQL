@@ -63,4 +63,7 @@ SELECT * FROM phone_calls
 WHERE "month" = 7 AND "day" = 28 AND "duration" < 60
 AND "caller" = '(286) 555-6063';
 
-
+-- early flights
+-- All flights in 29/7
+SELECT * FROM flights
+WHERE "month" = 7 AND "day" = 29 AND "hour" < 12;
