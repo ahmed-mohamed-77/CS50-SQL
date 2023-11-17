@@ -46,6 +46,7 @@ WHERE "license_plate" = 'G412CB7';
 /*TARGET (RECIVER = (676) 555-6554  AND RECIVER NAME = James)*/
 -- FIRST license_plate is passport_number = 1988161715 ,phone_number is (286) 555-6063
 -- and name is Taylor
+-- 266 | 76054385| 2021| 7| 28|Leggett Street | withdraw| 60
 SELECT * FROM people
 WHERE "license_plate" = '1106N58';
 
