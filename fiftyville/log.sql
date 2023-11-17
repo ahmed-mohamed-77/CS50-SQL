@@ -22,3 +22,5 @@ they called someone who talked to them for less than a minute. In the call, I he
 take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ...
 */
 
+SELECT * FROM flights
+WHERE "month" = 7 AND "day" = 29;
