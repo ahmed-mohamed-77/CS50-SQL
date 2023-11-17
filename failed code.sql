@@ -62,3 +62,36 @@ INSERT INTO meteorites (
 SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM meteorites_temp
 ORDER BY "id";
+
+--fiftyvill filter
+
+/*OUT*/
+-- FIRST license_plate is passport_number = 2963008352 ,phone_number is (725) 555-4692
+-- and name is Vanessa
+SELECT * FROM people
+WHERE "license_plate" = '5P2BI95';
+
+
+/*OUT*/
+-- FIRST license_plate is passport_number = 7526138472 ,phone_number is (301) 555-4174
+-- and name is Barry
+SELECT * FROM people
+WHERE "license_plate" = '6P58WS2';
+
+/*OUT*/
+-- FIRST license_plate is passport_number = 8496433585 ,phone_number is (389) 555-5198
+-- and name is Luca
+SELECT * FROM people
+WHERE "license_plate" = '4328GD8';
+
+/*OUT*/
+-- FIRST license_plate is passport_number = 7049073643 ,phone_number is (829) 555-5269
+-- and name is Iman
+SELECT * FROM people
+WHERE "license_plate" = 'L93JTIZ';
+
+/*OUT*/
+-- FIRST license_plate is passport_number = 8294398571 ,phone_number is (499) 555-9472
+-- and name is Kelsey
+SELECT * FROM people
+WHERE "license_plate" = '0NTHK55';
