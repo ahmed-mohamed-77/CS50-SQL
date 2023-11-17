@@ -83,4 +83,7 @@ Earlier this morning, before I arrived at Emma's bakery,
 I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.*/
 
 SELECT * FROM  atm_transactions
-WHERE "month" = 7 AND "day" = 28;
+WHERE "month" = 7 AND "day" = 28
+AND "atm_location" = 'Leggett Street' AND "transaction_type" = 'withdraw';
+
+
