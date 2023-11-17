@@ -51,12 +51,27 @@ WHERE "license_plate" = '6P58WS2';
 SELECT * FROM people
 WHERE "license_plate" = '4328GD8';
 
--- FIRST license_plate is passport_number = 2963008352 ,phone_number is (725) 555-4692
--- and name is Vanessa
+-- FIRST license_plate is passport_number = 1695452385 ,phone_number is (130) 555-0289
+-- and name is Sofia
 SELECT * FROM people
-WHERE "license_plate" = '5P2BI95';
+WHERE "license_plate" = 'G412CB7';
 
--- FIRST license_plate is passport_number = 2963008352 ,phone_number is (725) 555-4692
--- and name is Vanessa
+-- FIRST license_plate is passport_number = 7049073643 ,phone_number is (829) 555-5269
+-- and name is Iman
 SELECT * FROM people
-WHERE "license_plate" = '5P2BI95';
+WHERE "license_plate" = 'L93JTIZ';
+
+-- FIRST license_plate is passport_number = 3592750733 ,phone_number is (770) 555-1861
+-- and name is Diana
+SELECT * FROM people
+WHERE "license_plate" = '322W7JE';
+
+-- FIRST license_plate is passport_number = 7049073643 ,phone_number is (829) 555-5269
+-- and name is Iman
+SELECT * FROM people
+WHERE "license_plate" = '0NTHK55';
+
+-- FIRST license_plate is passport_number = 7049073643 ,phone_number is (829) 555-5269
+-- and name is Iman
+SELECT * FROM people
+WHERE "license_plate" = '1106N58';
