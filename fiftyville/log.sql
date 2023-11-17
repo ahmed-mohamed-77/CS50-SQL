@@ -66,12 +66,12 @@ WHERE "license_plate" = 'L93JTIZ';
 SELECT * FROM people
 WHERE "license_plate" = '322W7JE';
 
--- FIRST license_plate is passport_number = 7049073643 ,phone_number is (829) 555-5269
--- and name is Iman
+-- FIRST license_plate is passport_number = 8294398571 ,phone_number is (499) 555-9472
+-- and name is Kelsey
 SELECT * FROM people
 WHERE "license_plate" = '0NTHK55';
 
--- FIRST license_plate is passport_number = 7049073643 ,phone_number is (829) 555-5269
--- and name is Iman
+-- FIRST license_plate is passport_number = 1988161715 ,phone_number is (286) 555-6063
+-- and name is Taylor
 SELECT * FROM people
 WHERE "license_plate" = '1106N58';
