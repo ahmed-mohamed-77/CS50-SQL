@@ -97,7 +97,7 @@ JOIN people AS P ON BA.person_id =P.id
 WHERE "account_number" = '76054385';
 
 
-
+-- the theif
 /*TARGET (RECIVER = (375) 555-8161 AND RECIVER NAME = Robin)*/
 -- FIRST license_plate is passport_number = 5773159633 ,phone_number is (367) 555-5533
 -- and name is Bruce
@@ -105,7 +105,4 @@ SELECT * FROM bank_accounts AS BA
 JOIN people AS P ON BA.person_id =P.id
 WHERE "account_number" = '49610011';
 
--- Bruce Sofia Taylor
-SELECT * FROM bank_accounts AS BA
-JOIN people AS P ON BA.person_id =P.id
-WHERE "account_number" = '26013199';
+
