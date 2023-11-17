@@ -76,5 +76,10 @@ WHERE "license_plate" = '0NTHK55';
 SELECT * FROM people
 WHERE "license_plate" = '1106N58';
 
+-- filter calls less than 60 sec
 SELECT * FROM phone_calls
-WHERE "month" = 7 AND "day" = 28;
+WHERE "month" = 7 AND "day" = 28 AND "duration" < 60;
+
+SELECT * FROM phone_calls
+WHERE "month" = 7 AND "day" = 28 AND "duration" < 60
+AND "caller" = '(725) 555-4692';
