@@ -30,3 +30,33 @@ WHERE "month" = 7 AND "day" = 28 AND "hour" = 10 and "minute" BETWEEN 16 AND 35
 -- All flights in 29/7
 SELECT * FROM flights
 WHERE "month" = 7 AND "day" = 29 ;
+
+-- FIRST license_plate is passport_number = 2963008352 ,phone_number is (725) 555-4692
+-- and name is Vanessa
+SELECT * FROM people
+WHERE "license_plate" = '5P2BI95';
+
+-- FIRST license_plate is passport_number = 5773159633 ,phone_number is (367) 555-5533
+-- and name is Bruce
+SELECT * FROM people
+WHERE "license_plate" = '94KL13X';
+
+-- FIRST license_plate is passport_number = 7526138472 ,phone_number is (301) 555-4174
+-- and name is Barry
+SELECT * FROM people
+WHERE "license_plate" = '6P58WS2';
+
+-- FIRST license_plate is passport_number = 8496433585 ,phone_number is (389) 555-5198
+-- and name is Luca
+SELECT * FROM people
+WHERE "license_plate" = '4328GD8';
+
+-- FIRST license_plate is passport_number = 2963008352 ,phone_number is (725) 555-4692
+-- and name is Vanessa
+SELECT * FROM people
+WHERE "license_plate" = '5P2BI95';
+
+-- FIRST license_plate is passport_number = 2963008352 ,phone_number is (725) 555-4692
+-- and name is Vanessa
+SELECT * FROM people
+WHERE "license_plate" = '5P2BI95';
