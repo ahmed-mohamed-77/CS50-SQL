@@ -15,3 +15,10 @@ WHERE "month" = 7 AND "day" = 28 AND "hour" = 10 AND "minute" = 15;
 
 SELECT * FROM interviews
 WHERE 	"month" = 7 AND	"day" = 28 AND "transcript" LIKE '%the bakery%';
+
+/*
+If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.
+they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to
+take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ...
+*/
+
