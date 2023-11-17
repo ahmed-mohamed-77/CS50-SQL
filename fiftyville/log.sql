@@ -23,4 +23,4 @@ take the earliest flight out of Fiftyville tomorrow. The thief then asked the pe
 */
 
 SELECT * FROM flights
-WHERE "month" = 7 AND "day" = 29;
+WHERE "month" = 7 AND "day" = 29 ;
