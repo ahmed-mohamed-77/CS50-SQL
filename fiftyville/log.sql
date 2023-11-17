@@ -1,1 +1,2 @@
-SELEC
+SELECT * FROM crime_scene_reports
+WHERE 
