@@ -86,7 +86,7 @@ SELECT * FROM  atm_transactions
 WHERE "month" = 7 AND "day" = 28
 AND "atm_location" = 'Leggett Street' AND "transaction_type" = 'withdraw';
 
-
+-- Bruce Sofia Taylor
 SELECT * FROM bank_accounts AS BA
 JOIN people AS P ON BA.person_id =P.id
-WHERE "account_number" = '28500762';
+WHERE "account_number" = '76054385';
