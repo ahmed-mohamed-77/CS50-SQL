@@ -105,4 +105,7 @@ SELECT * FROM bank_accounts AS BA
 JOIN people AS P ON BA.person_id =P.id
 WHERE "account_number" = '49610011';
 
-
+SELECT city  FROM airports
+WHERE "id" = (
+    SELECT origin_airport_id FROM flights
+)
