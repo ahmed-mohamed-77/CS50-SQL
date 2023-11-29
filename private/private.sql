@@ -7,7 +7,7 @@ CREATE TABLE triplets(
 
 INSERT INTO triplets("sentence_id", "start_char", "lengh")
 VALUES (14, 98, 4),
-       (14, 3, 5),
+       (114, 3, 5),
        (618, 72, 9),
        (630, 7, 3),
        (932, 12, 5),
