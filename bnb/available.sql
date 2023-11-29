@@ -1,4 +1,5 @@
 CREATE VIEW available AS
-SELECT "id", "property_type", "host_name", date
-FROM listings
+SELECT L."id", L."property_type", L."host_name", A."date"
+FROM listings AS L
+JOIN availabilities AS A ON A."id" = L."listing_id"
 WHERE "bedrooms" = 1;
