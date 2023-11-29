@@ -29,3 +29,8 @@ WHERE id = 2346;
 SELECT SUBSTR("sentence", 14, 5) AS "encryption"
 FROM "sentences"
 WHERE id = 3041;
+
+:( private.sql creates a view named "message" without error
+    private.sql does not create a view named "message"
+:| private.sql produces view that reveals secret message
+    can't check until a frown turns upside down
