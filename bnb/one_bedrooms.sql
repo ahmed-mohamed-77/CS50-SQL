@@ -5,6 +5,5 @@ WHERE "accommodates" = 1
 LIMIT 25;
 
 
-SELECT "id", "property_type", "host_name", "accommodates"
-FROM listings
-LIMIT 25;
+
+DROP VIEW one_bedrooms;
