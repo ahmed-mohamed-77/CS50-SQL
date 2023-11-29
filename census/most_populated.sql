@@ -7,6 +7,6 @@ FROM
 GROUP BY
     "district"
 HAVING
-    locality LIKE '%Nepal%'
-GROUP BY
+    "locality" LIKE '%Nepal%'
+ORDER BY
     "population" DESC;
