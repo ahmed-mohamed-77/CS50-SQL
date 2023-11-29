@@ -1,11 +1,31 @@
-SELECT * FROM sentences
-WHERE id = 14;
-
-SELECT SUBSTR("My own complete happiness, and the home-centred interests which rise up
-around the man who first finds himself master of his own establishment,were sufficient to
-absorb all my attention; while Holmes, who loathed every form of society with his whole
-Bohemian soul, remained in our lodgings in Baker Street, buried among his old books, and
-alternating from week to week between cocaine and ambition, the drowsiness of the drug, and
-the fierce energy of his own keen nature.", 98, 4) AS "encryption"
+SELECT SUBSTR("sentence", 98, 4) AS "encryption"
 FROM "sentences"
 WHERE id = 14;
+
+SELECT SUBSTR("sentence", 3, 5) AS "encryption"
+FROM "sentences"
+WHERE id = 114;
+
+SELECT SUBSTR("sentence", 72, 9) AS "encryption"
+FROM "sentences"
+WHERE id = 618;
+
+SELECT SUBSTR("sentence", 7, 3) AS "encryption"
+FROM "sentences"
+WHERE id = 630;
+
+SELECT SUBSTR("sentence", 12, 5) AS "encryption"
+FROM "sentences"
+WHERE id = 932;
+
+SELECT SUBSTR("sentence", 50, 7) AS "encryption"
+FROM "sentences"
+WHERE id = 2230;
+
+SELECT SUBSTR("sentence", 44, 10) AS "encryption"
+FROM "sentences"
+WHERE id = 2346;
+
+SELECT SUBSTR("sentence", 14, 5) AS "encryption"
+FROM "sentences"
+WHERE id = 3041;
