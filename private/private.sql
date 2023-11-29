@@ -4,6 +4,9 @@ CREATE TABLE triplets(
     "lengh" INT
 );
 
+ALTER TABLE triplets
+ADD COLUMN 
+
 INSERT INTO triplets("sentence_id", "start_char", "lengh")
 VALUES (14, 98, 4),
        (14, 3, 5),
@@ -13,7 +16,7 @@ VALUES (14, 98, 4),
        (2230, 50, 7),
        (2346, 44, 10),
        (3041, 14, 5);
-       
+
 CREATE VIEW message AS
     SELECT SUBSTR("sentence", 98, 4) AS "encryption"
     FROM "sentences"
