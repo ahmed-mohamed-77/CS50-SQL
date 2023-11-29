@@ -5,4 +5,8 @@ SELECT
 FROM
     census
 GROUP BY
-    "district";
+    "district"
+HAVING
+    locality LIKE '%Nepal%'
+GROUP BY
+    "population" DESC;
