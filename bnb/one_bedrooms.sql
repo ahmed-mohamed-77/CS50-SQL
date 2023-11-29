@@ -1,4 +1,5 @@
 CREATE VIEW one_bedrooms AS
 SELECT "id", "property_type", "host_name", "accommodates"
 FROM listings
-WHERE "accommodates" = 1;
+WHERE "	bedrooms" = 1;
+
