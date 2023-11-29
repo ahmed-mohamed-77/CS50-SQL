@@ -1,3 +1,5 @@
+CREATE TABLE 
+
 CREATE VIEW message AS
     SELECT SUBSTR("sentence", 98, 4) AS "encryption"
     FROM "sentences"
