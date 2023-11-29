@@ -1,3 +1,4 @@
+
 SELECT
     L."id",
     L."property_type",
