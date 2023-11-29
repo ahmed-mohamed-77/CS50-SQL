@@ -1,6 +1,8 @@
 CREATE TABLE triplets(
-    
-)
+    "sentence_id" INT,
+    "start_char" INT,
+    "lengh" INT
+);
 
 CREATE VIEW message AS
     SELECT SUBSTR("sentence", 98, 4) AS "encryption"
