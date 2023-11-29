@@ -1,7 +1,15 @@
 CREATE VIEW frequently_reviewed AS
-SELECT "id", "property_type", "host_name", COUNT("reviews")
-FROM listings AS L
-JOIN reviews AS R ON R."id" = L."listing_id"
-GROUP BY "property_type"
-ORDER BY "property_type", "host_name"
+SELECT
+    L."id",
+    L."property_type",
+    L."host_name",
+    COUNT(R."id") AS "reviews"
+FROM
+    listings AS L
+JOIN
+    reviews AS R ON R."listing_id" = L."id"
+GROUP BY
+    L."id", L."property_type", L."host_name"
+ORDER BY
+    "reviews" DESC, L."property_type", L."host_name"
 LIMIT 100;
