@@ -4,7 +4,7 @@ password = input("Enter a password: ")
 db.execute(
     "UPDATE "users"
     SET "password" = ?
-    WHERE "username" = 'admin';
+    WHERE "username" = 'admin'
     , password"
 )
 print("Hacked!")
