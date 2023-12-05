@@ -137,12 +137,6 @@ VALUES
 (38, 'Kyle', 'Anderson', 'kyle.anderson@example.com', '3536 Oak St', '555-9900', 'Customer'),
 (39, 'Lily', 'Davis', 'lily.davis@example.com', '3637 Elm St', '555-1122', 'Employee'),
 (40, 'Mason', 'Brown', 'mason.brown@example.com', '3738 Cedar St', '555-3344', 'Customer'),
-
--- Inserting data into peoples table
-INSERT INTO peoples (id, first_name, last_name, email, address, phone, role)
-VALUES
--- Previous entries here...
-
 (41, 'Natalie', 'Miller', 'natalie.miller@example.com', '3839 Walnut St', '555-5566', 'Employee'),
 (42, 'Oscar', 'Taylor', 'oscar.taylor@example.com', '3940 Birch St', '555-7788', 'Customer'),
 (43, 'Pamela', 'Roberts', 'pamela.roberts@example.com', '4041 Pine St', '555-9900', 'Employee'),
@@ -153,7 +147,24 @@ VALUES
 (48, 'Ulysses', 'Brown', 'ulysses.brown@example.com', '4546 Birch St', '555-9900', 'Customer'),
 (49, 'Vivian', 'Miller', 'vivian.miller@example.com', '4647 Pine St', '555-1122', 'Employee'),
 (50, 'Winston', 'Taylor', 'winston.taylor@example.com', '4748 Oak St', '555-3344', 'Customer'),
--- Continue with additional entries
--- ... (up to 100 entries)
-;
+(51, 'Xander', 'Martinez', 'xander.martinez@example.com', '4849 Elm St', '555-5566', 'Employee'),
+(52, 'Yvonne', 'Wilson', 'yvonne.wilson@example.com', '4950 Cedar St', '555-7788', 'Customer'),
+(53, 'Zane', 'Roberts', 'zane.roberts@example.com', '5051 Walnut St', '555-9900', 'Employee'),
+(54, 'Abigail', 'Brown', 'abigail.brown@example.com', '5152 Birch St', '555-1122', 'Customer'),
+(55, 'Bryan', 'Davis', 'bryan.davis@example.com', '5253 Pine St', '555-3344', 'Employee'),
+(56, 'Cassandra', 'Anderson', 'cassandra.anderson@example.com', '5354 Oak St', '555-5566', 'Customer'),
+(57, 'Derek', 'Miller', 'derek.miller@example.com', '5455 Elm St', '555-7788', 'Employee'),
+(58, 'Emily', 'Taylor', 'emily.taylor@example.com', '5556 Cedar St', '555-9900', 'Customer'),
+(59, 'Felix', 'Martinez', 'felix.martinez@example.com', '5657 Walnut St', '555-1122', 'Employee'),
+(60, 'Gabrielle', 'Wilson', 'gabrielle.wilson@example.com', '5758 Birch St', '555-3344', 'Customer'),
+(61, 'Henry', 'Roberts', 'henry.roberts@example.com', '5859 Pine St', '555-5566', 'Employee'),
+(62, 'Isabel', 'Brown', 'isabel.brown@example.com', '5960 Oak St', '555-7788', 'Customer'),
+(63, 'Jackson', 'Davis', 'jackson.davis@example.com', '6061 Elm St', '555-9900', 'Employee'),
+(64, 'Katherine', 'Anderson', 'katherine.anderson@example.com', '6162 Cedar St', '555-1122', 'Customer'),
+(65, 'Liam', 'Miller', 'liam.miller@example.com', '6263 Walnut St', '555-3344', 'Employee'),
+(66, 'Mia', 'Taylor', 'mia.taylor@example.com', '6364 Birch St', '555-5566', 'Customer'),
+(67, 'Nathan', 'Martinez', 'nathan.martinez@example.com', '6465 Pine St', '555-7788', 'Employee'),
+(68, 'Olivia', 'Wilson', 'olivia.wilson@example.com', '6566 Oak St', '555-9900', 'Customer'),
+(69, 'Preston', 'Roberts', 'preston.roberts@example.com', '6667 Elm St', '555-1122', 'Employee'),
+(70, 'Quinn', 'Brown', 'quinn.brown@example.com', '6768 Cedar St', '555-3344', 'Customer'),
 
