@@ -109,7 +109,6 @@ VALUES
 (10, 'Ivy', 'Clark', 'ivy.clark@example.com', '707 Oak St', '555-3344', 'Employee'),
 (11, 'Jack', 'Roberts', 'jack.roberts@example.com', '808 Elm St', '555-5566', 'Customer'),
 (12, 'Kelly', 'Hill', 'kelly.hill@example.com', '909 Maple St', '555-7788', 'Employee'),
--- Add more entries as needed
 (13, 'Liam', 'Wilson', 'liam.wilson@example.com', '1011 Pine St', '555-9900', 'Customer'),
 (14, 'Mia', 'Martinez', 'mia.martinez@example.com', '1112 Oak St', '555-1122', 'Employee'),
 (15, 'Noah', 'Johnson', 'noah.johnson@example.com', '1213 Elm St', '555-3344', 'Customer'),
@@ -118,15 +117,6 @@ VALUES
 (18, 'Penelope', 'Brown', 'penelope.brown@example.com', '1516 Birch St', '555-9900', 'Employee'),
 (19, 'Quinn', 'Miller', 'quinn.miller@example.com', '1617 Pine St', '555-1122', 'Customer'),
 (20, 'Robert', 'Taylor', 'robert.taylor@example.com', '1718 Oak St', '555-3344', 'Employee'),
--- Continue with additional entries
--- ... (up to 100 entries)
-;
-
--- Inserting data into peoples table
-INSERT INTO peoples (id, first_name, last_name, email, address, phone, role)
-VALUES
--- Previous entries here...
-
 (21, 'Samantha', 'White', 'samantha.white@example.com', '1819 Elm St', '555-5566', 'Customer'),
 (22, 'Thomas', 'Hill', 'thomas.hill@example.com', '1920 Cedar St', '555-7788', 'Employee'),
 (23, 'Victoria', 'Roberts', 'victoria.roberts@example.com', '2021 Walnut St', '555-9900', 'Customer'),
@@ -139,6 +129,30 @@ VALUES
 (30, 'Chloe', 'Taylor', 'chloe.taylor@example.com', '2728 Birch St', '555-3344', 'Employee'),
 (31, 'David', 'Johnson', 'david.johnson@example.com', '2829 Pine St', '555-5566', 'Customer'),
 (32, 'Emily', 'Clark', 'emily.clark@example.com', '2930 Oak St', '555-7788', 'Employee'),
+(33, 'Fiona', 'Miller', 'fiona.miller@example.com', '3031 Elm St', '555-9900', 'Employee'),
+(34, 'George', 'Taylor', 'george.taylor@example.com', '3132 Cedar St', '555-1122', 'Customer'),
+(35, 'Hannah', 'Roberts', 'hannah.roberts@example.com', '3233 Walnut St', '555-3344', 'Employee'),
+(36, 'Ian', 'Martinez', 'ian.martinez@example.com', '3334 Birch St', '555-5566', 'Customer'),
+(37, 'Jessica', 'Wilson', 'jessica.wilson@example.com', '3435 Pine St', '555-7788', 'Employee'),
+(38, 'Kyle', 'Anderson', 'kyle.anderson@example.com', '3536 Oak St', '555-9900', 'Customer'),
+(39, 'Lily', 'Davis', 'lily.davis@example.com', '3637 Elm St', '555-1122', 'Employee'),
+(40, 'Mason', 'Brown', 'mason.brown@example.com', '3738 Cedar St', '555-3344', 'Customer'),
+
+-- Inserting data into peoples table
+INSERT INTO peoples (id, first_name, last_name, email, address, phone, role)
+VALUES
+-- Previous entries here...
+
+(41, 'Natalie', 'Miller', 'natalie.miller@example.com', '3839 Walnut St', '555-5566', 'Employee'),
+(42, 'Oscar', 'Taylor', 'oscar.taylor@example.com', '3940 Birch St', '555-7788', 'Customer'),
+(43, 'Pamela', 'Roberts', 'pamela.roberts@example.com', '4041 Pine St', '555-9900', 'Employee'),
+(44, 'Quentin', 'Martinez', 'quentin.martinez@example.com', '4142 Oak St', '555-1122', 'Customer'),
+(45, 'Rachel', 'Wilson', 'rachel.wilson@example.com', '4243 Elm St', '555-3344', 'Employee'),
+(46, 'Samuel', 'Anderson', 'samuel.anderson@example.com', '4344 Cedar St', '555-5566', 'Customer'),
+(47, 'Tara', 'Davis', 'tara.davis@example.com', '4445 Walnut St', '555-7788', 'Employee'),
+(48, 'Ulysses', 'Brown', 'ulysses.brown@example.com', '4546 Birch St', '555-9900', 'Customer'),
+(49, 'Vivian', 'Miller', 'vivian.miller@example.com', '4647 Pine St', '555-1122', 'Employee'),
+(50, 'Winston', 'Taylor', 'winston.taylor@example.com', '4748 Oak St', '555-3344', 'Customer'),
 -- Continue with additional entries
 -- ... (up to 100 entries)
 ;
