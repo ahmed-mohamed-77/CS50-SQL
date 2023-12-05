@@ -93,3 +93,53 @@ CREATE TABLE loan_payments(
     "paid_date" DATETIME NOT NULL,
     PRIMARY KEY("loan_payment_id")
 );
+
+-- Inserting data into peoples table
+INSERT INTO peoples (id, first_name, last_name, email, address, phone, role)
+VALUES
+(1, 'John', 'Doe', 'john.doe@example.com', '123 Main St', '555-1234', 'Customer'),
+(2, 'Jane', 'Smith', 'jane.smith@example.com', '456 Oak St', '555-5678', 'Employee'),
+(3, 'Bob', 'Johnson', 'bob.johnson@example.com', '789 Pine St', '555-9101', 'Customer'),
+(4, 'Alice', 'Williams', 'alice.williams@example.com', '101 Maple St', '555-1122', 'Employee'),
+(5, 'Charlie', 'Brown', 'charlie.brown@example.com', '202 Elm St', '555-3344', 'Customer'),
+(6, 'Eva', 'Davis', 'eva.davis@example.com', '303 Cedar St', '555-5566', 'Employee'),
+(7, 'Frank', 'Miller', 'frank.miller@example.com', '404 Walnut St', '555-7788', 'Customer'),
+(8, 'Grace', 'Taylor', 'grace.taylor@example.com', '505 Birch St', '555-9900', 'Employee'),
+(9, 'Henry', 'Anderson', 'henry.anderson@example.com', '606 Pine St', '555-1122', 'Customer'),
+(10, 'Ivy', 'Clark', 'ivy.clark@example.com', '707 Oak St', '555-3344', 'Employee'),
+(11, 'Jack', 'Roberts', 'jack.roberts@example.com', '808 Elm St', '555-5566', 'Customer'),
+(12, 'Kelly', 'Hill', 'kelly.hill@example.com', '909 Maple St', '555-7788', 'Employee'),
+-- Add more entries as needed
+(13, 'Liam', 'Wilson', 'liam.wilson@example.com', '1011 Pine St', '555-9900', 'Customer'),
+(14, 'Mia', 'Martinez', 'mia.martinez@example.com', '1112 Oak St', '555-1122', 'Employee'),
+(15, 'Noah', 'Johnson', 'noah.johnson@example.com', '1213 Elm St', '555-3344', 'Customer'),
+(16, 'Olivia', 'Davis', 'olivia.davis@example.com', '1314 Cedar St', '555-5566', 'Employee'),
+(17, 'Owen', 'Anderson', 'owen.anderson@example.com', '1415 Walnut St', '555-7788', 'Customer'),
+(18, 'Penelope', 'Brown', 'penelope.brown@example.com', '1516 Birch St', '555-9900', 'Employee'),
+(19, 'Quinn', 'Miller', 'quinn.miller@example.com', '1617 Pine St', '555-1122', 'Customer'),
+(20, 'Robert', 'Taylor', 'robert.taylor@example.com', '1718 Oak St', '555-3344', 'Employee'),
+-- Continue with additional entries
+-- ... (up to 100 entries)
+;
+
+-- Inserting data into peoples table
+INSERT INTO peoples (id, first_name, last_name, email, address, phone, role)
+VALUES
+-- Previous entries here...
+
+(21, 'Samantha', 'White', 'samantha.white@example.com', '1819 Elm St', '555-5566', 'Customer'),
+(22, 'Thomas', 'Hill', 'thomas.hill@example.com', '1920 Cedar St', '555-7788', 'Employee'),
+(23, 'Victoria', 'Roberts', 'victoria.roberts@example.com', '2021 Walnut St', '555-9900', 'Customer'),
+(24, 'William', 'Martinez', 'william.martinez@example.com', '2122 Birch St', '555-1122', 'Employee'),
+(25, 'Xavier', 'Wilson', 'xavier.wilson@example.com', '2223 Pine St', '555-3344', 'Customer'),
+(26, 'Yasmine', 'Anderson', 'yasmine.anderson@example.com', '2324 Oak St', '555-5566', 'Employee'),
+(27, 'Zachary', 'Davis', 'zachary.davis@example.com', '2425 Elm St', '555-7788', 'Customer'),
+(28, 'Ava', 'Brown', 'ava.brown@example.com', '2526 Cedar St', '555-9900', 'Employee'),
+(29, 'Benjamin', 'Miller', 'benjamin.miller@example.com', '2627 Walnut St', '555-1122', 'Customer'),
+(30, 'Chloe', 'Taylor', 'chloe.taylor@example.com', '2728 Birch St', '555-3344', 'Employee'),
+(31, 'David', 'Johnson', 'david.johnson@example.com', '2829 Pine St', '555-5566', 'Customer'),
+(32, 'Emily', 'Clark', 'emily.clark@example.com', '2930 Oak St', '555-7788', 'Employee'),
+-- Continue with additional entries
+-- ... (up to 100 entries)
+;
+
