@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS loan_payments;
 
 
 CREATE TABLE peoples(
-    "id" INT,
+    "id" INT AUTOINCREMENT ,
     "first_name" VARCHAR(15) NOT NULL,
     "last_name" VARCHAR(15) NOT NULL,
     "email" VARCHAR(55) NOT NULL,
