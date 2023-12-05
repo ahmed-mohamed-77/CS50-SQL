@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS loans;
 DROP TABLE IF EXISTS loan_payments;
 
 
-CREATE TABLE peoples(
+CREATE TABLE peoples (
     "id" INTEGER ,
     "first_name" VARCHAR(15) NOT NULL,
     "last_name" VARCHAR(15) NOT NULL,
@@ -23,23 +23,7 @@ CREATE TABLE peoples(
     PRIMARY KEY ("id")
 );
 
-CREATE TABLE employees(
-    "employee_id" INTEGER ,
-    "branch_id" INTEGER,
-    "position" VARCHAR(25) NOT NULL,
-    PRIMARY KEY ("employee_id", "branch_id"),
-    FOREIGN KEY ("employee_id") REFERENCES peoples("id"),
-    FOREIGN KEY ("branch_id") REFERENCES branchs("id")
-);
-
-CREATE TABLE customers(
-    "customer_id" INTEGER ,
-    "customer_type" VARCHAR(25),
-    PRIMARY KEY ("customer_id"),
-    FOREIGN KEY ("customer_id") REFERENCES peoples("id")
-);
-
-CREATE TABLE branchs(
+CREATE TABLE branchs (
     "id" INTEGER ,
     "branch_name" VARCHAR(20) NOT NULL,
     "branch_code" INTEGER NOT NULL,
@@ -48,15 +32,41 @@ CREATE TABLE branchs(
     PRIMARY KEY("id")
 );
 
-CREATE TABLE accounts(
+CREATE TABLE employees (
+    "employee_id" INTEGER ,
+    "branch_id" INTEGER,
+    "position" VARCHAR(25) NOT NULL,
+    PRIMARY KEY ("employee_id", "branch_id"),
+    FOREIGN KEY ("employee_id") REFERENCES peoples("id"),
+    FOREIGN KEY ("branch_id") REFERENCES branchs("id")
+);
+
+CREATE TABLE customers (
+    "customer_id" INTEGER ,
+    "customer_type" VARCHAR(25),
+    PRIMARY KEY ("customer_id"),
+    FOREIGN KEY ("customer_id") REFERENCES peoples("id")
+);
+
+CREATE TABLE transactions (
+    "transaction_id" INTEGER ,
+    "employee_id" INTEGER ,
+    "transaction_type" VARCHAR(20) NOT NULL,
+    "amount" NUMERIC(10,2) NOT NULL,
+    "date" DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    PRIMARY KEY("transaction_id"),
+    FOREIGN KEY ("employee_id") REFERENCES employees("employee_id")
+);
+
+CREATE TABLE accounts (
     "account_id" INTEGER ,
     "customer_id" INTEGER,
     "transaction_id" INTEGER,
     "account_number" VARCHAR(20) NOT NULL,
     "account_type" VARCHAR(20) NOT NULL,
     "current_balance" NUMERIC(10,2) NOT NULL,
-    "open_date" DATETIME DEFAULT DATETIME NOT NULL,
-    "close_date" DATETIME DEFAULT DATETIME DEFAULT NULL,
+    "open_date" DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    "close_date" DATETIME DEFAULT NULL,
     "account_status" VARCHAR(20) DEFAULT 'active' NOT NULL,
     "branch_id" INTEGER,
     PRIMARY KEY ("account_id"),
@@ -65,26 +75,16 @@ CREATE TABLE accounts(
     FOREIGN KEY ("transaction_id") REFERENCES transactions("transaction_id")
 );
 
-CREATE TABLE transactions(
-    "transaction_id" INTEGER ,
-    "employee_id" INTEGER ,
-    "transaction_type" VARCHAR(20) NOT NULL,
-    "aomunt" NUMERIC(10,2) NOT NULL,
-    "date" DATETIME DEFAULT DATETIME NOT NULL,
-    PRIMARY KEY("transaction_id"),
-    FOREIGN KEY ("employee_id") REFERENCES employees("employee_id")
-);
-
-CREATE TABLE loans(
+CREATE TABLE loans (
     "loan_id" INTEGER ,
     "employee_id" INTEGER,
     "customer_id" INTEGER,
     "loan_payment_id" INTEGER,
     "loan_type" VARCHAR(20) NOT NULL,
     "loan_amount" NUMERIC(10,2) NOT NULL,
-    "interset_rate" NUMERIC(10,2) NOT NULL,
-    "start_date" DATETIME DEFAULT TIMESTAMP NOT NULL,
-    "end_date" DATETIME DEFAULT TIMESTAMP NOT NULL,
+    "interest_rate" NUMERIC(10,2) NOT NULL,
+    "start_date" DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    "end_date" DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     "loan_status" VARCHAR(20) NOT NULL,
     PRIMARY KEY ("loan_id"),
     FOREIGN KEY ("customer_id") REFERENCES customers("customer_id"),
@@ -92,7 +92,7 @@ CREATE TABLE loans(
     FOREIGN KEY ("loan_payment_id") REFERENCES loan_payments("loan_payment_id")
 );
 
-CREATE TABLE loan_payments(
+CREATE TABLE loan_payments (
     "loan_payment_id" INTEGER ,
     "scheduled_payment_date" DATETIME NOT NULL,
     "payment_amount" NUMERIC(10,2) NOT NULL,
