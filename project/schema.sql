@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS loan_payments;
 
 
 CREATE TABLE peoples(
-    "id" INT AUTOINCREMENT ,
+    "id" INT AUTOINCREMENT,
     "first_name" VARCHAR(15) NOT NULL,
     "last_name" VARCHAR(15) NOT NULL,
     "email" VARCHAR(55) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE peoples(
 );
 
 CREATE TABLE employees(
-    "employee_id" INT,
+    "employee_id" INT AUTOINCREMENT ,
     "branch_id" INT,
     "position" VARCHAR(25) NOT NULL,
     PRIMARY KEY ("employee_id", "branch_id"),
@@ -33,14 +33,14 @@ CREATE TABLE employees(
 );
 
 CREATE TABLE customers(
-    "customer_id" INT,
+    "customer_id" INT AUTOINCREMENT ,
     "customer_type" VARCHAR(25),
     PRIMARY KEY ("customer_id"),
     FOREIGN KEY ("customer_id") REFERENCES people("id")
 );
 
 CREATE TABLE branchs(
-    "id" INT,
+    "id" INT AUTOINCREMENT ,
     "branch_name" VARCHAR(20) NOT NULL,
     "branch_code" INT NOT NULL,
     "address" VARCHAR(25) NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE branchs(
 );
 
 CREATE TABLE accounts(
-    "account_id" INT,
+    "account_id" INT AUTOINCREMENT ,
     "customer_id" INT,
     "transaction_id" INT,
     "account_number" VARCHAR(20) NOT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE accounts(
 );
 
 CREATE TABLE transactions(
-    "transaction_id" INT,
+    "transaction_id" INT AUTOINCREMENT ,
     "employee_id" INT ,
     "transaction_type" VARCHAR(20) NOT NULL,
     "aomunt" NUMERIC(10,2) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE transactions(
 );
 
 CREATE TABLE loans(
-    "loan_id" INT,
+    "loan_id" INT AUTOINCREMENT ,
     "employee_id" INT,
     "customer_id" INT,
     "loan_payment_id" INT,
@@ -93,7 +93,7 @@ CREATE TABLE loans(
 );
 
 CREATE TABLE loan_payments(
-    "loan_payment_id" INT ,
+    "loan_payment_id" INT AUTOINCREMENT ,
     "scheduled_payment_date" DATETIME NOT NULL,
     "payment_amount" NUMERIC(10,2) NOT NULL,
     "principal_amount" NUMERIC(10,2) NOT NULL,
@@ -350,55 +350,55 @@ VALUES
 ('Branch Manager');
 
 
-INSERT INTO customers ("customer_id", "customer_type")
-VALUES
-(1, 'Individual'),
-(2, 'Business'),
-(3, 'Individual'),
-(4, 'Business'),
-(5, 'Individual'),
-(6, 'Business'),
-(7, 'Individual'),
-(8, 'Business'),
-(9, 'Individual'),
-(10, 'Business'),
-(11, 'Individual'),
-(12, 'Business'),
-(13, 'Individual'),
-(14, 'Business'),
-(15, 'Individual'),
-(16, 'Business'),
-(17, 'Individual'),
-(18, 'Business'),
-(19, 'Individual'),
-(20, 'Business'),
-(21, 'Individual'),
-(22, 'Business'),
-(23, 'Individual'),
-(24, 'Business'),
-(25, 'Individual'),
-(26, 'Business'),
-(27, 'Individual'),
-(28, 'Business'),
-(29, 'Individual'),
-(30, 'Business'),
-(31, 'Individual'),
-(32, 'Business'),
-(33, 'Individual'),
-(34, 'Business'),
-(35, 'Individual'),
-(36, 'Business'),
-(37, 'Individual'),
-(38, 'Business'),
-(39, 'Individual'),
-(40, 'Business'),
-(41, 'Individual'),
-(42, 'Business'),
-(43, 'Individual'),
-(44, 'Business'),
-(45, 'Individual'),
-(46, 'Business'),
-(47, 'Individual'),
-(48, 'Business'),
-(49, 'Individual'),
-(50, 'Business');
+-- INSERT INTO customers ("customer_id", "customer_type")
+-- VALUES
+-- (1, 'Individual'),
+-- (2, 'Business'),
+-- (3, 'Individual'),
+-- (4, 'Business'),
+-- (5, 'Individual'),
+-- (6, 'Business'),
+-- (7, 'Individual'),
+-- (8, 'Business'),
+-- (9, 'Individual'),
+-- (10, 'Business'),
+-- (11, 'Individual'),
+-- (12, 'Business'),
+-- (13, 'Individual'),
+-- (14, 'Business'),
+-- (15, 'Individual'),
+-- (16, 'Business'),
+-- (17, 'Individual'),
+-- (18, 'Business'),
+-- (19, 'Individual'),
+-- (20, 'Business'),
+-- (21, 'Individual'),
+-- (22, 'Business'),
+-- (23, 'Individual'),
+-- (24, 'Business'),
+-- (25, 'Individual'),
+-- (26, 'Business'),
+-- (27, 'Individual'),
+-- (28, 'Business'),
+-- (29, 'Individual'),
+-- (30, 'Business'),
+-- (31, 'Individual'),
+-- (32, 'Business'),
+-- (33, 'Individual'),
+-- (34, 'Business'),
+-- (35, 'Individual'),
+-- (36, 'Business'),
+-- (37, 'Individual'),
+-- (38, 'Business'),
+-- (39, 'Individual'),
+-- (40, 'Business'),
+-- (41, 'Individual'),
+-- (42, 'Business'),
+-- (43, 'Individual'),
+-- (44, 'Business'),
+-- (45, 'Individual'),
+-- (46, 'Business'),
+-- (47, 'Individual'),
+-- (48, 'Business'),
+-- (49, 'Individual'),
+-- (50, 'Business');
