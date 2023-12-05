@@ -36,7 +36,7 @@ CREATE TABLE customers(
     "customer_id" INTEGER ,
     "customer_type" VARCHAR(25),
     PRIMARY KEY ("customer_id"),
-    FOREIGN KEY ("customer_id") REFERENCES people("id")
+    FOREIGN KEY ("customer_id") REFERENCES peoples("id")
 );
 
 CREATE TABLE branchs(
