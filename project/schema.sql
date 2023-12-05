@@ -68,6 +68,7 @@ CREATE TABLE transactions(
 
 CREATE TABLE loans(
     "loan_id" INT,
+    "loan_payment_id" INT,
     "loan_type" VARCHAR(20) NOT NULL,
     "loan_amount" NUMERIC(10,2) NOT NULL,
     "interset_rate" NUMERIC(10,2) NOT NULL,
@@ -75,7 +76,7 @@ CREATE TABLE loans(
     "end_date" DATETIME DEFAULT TIMESTAMP NOT NULL,
     "loan_status" VARCHAR(20) NOT NULL,
     PRIMARY KEY ("loan_id"),
-    
+    FOREIGN KEY ("loan_payment_id") REFERENCES loan_payments("loan_payment_id")
 );
 
 CREATE TABLE loan_payments(
