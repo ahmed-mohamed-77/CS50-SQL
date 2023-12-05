@@ -13,7 +13,7 @@ CREATE TABLE peoples(
     "role" VARCHAR(9) CHECK("role" = 'Customer' OR "role" = 'Employee') NOT NULL,
     PRIMARY KEY ("id")
 );
-I
+IF peoples("role") = 'Employee' THEN
 CREATE TABLE employees(
     "employee_id" INT,
     "branch_id" INT,
