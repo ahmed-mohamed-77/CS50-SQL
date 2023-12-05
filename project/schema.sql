@@ -94,7 +94,7 @@ CREATE TABLE loan_payments(
     PRIMARY KEY("loan_payment_id")
 );
 
--- Inserting data into peoples table
+
 INSERT INTO peoples (id, first_name, last_name, email, address, phone, role)
 VALUES
 (1, 'John', 'Doe', 'john.doe@example.com', '123 Main St', '555-1234', 'Customer'),
@@ -197,3 +197,36 @@ VALUES
 (98, 'Evelyn 98', 'Lewis 98', 'evelyn98@example.com', 'Address 98', 'Phone 98', 'Employee'),
 (99, 'Joshua 99', 'Robinson 99', 'joshua99@example.com', 'Address 99', 'Phone 99', 'Customer'),
 (100, 'Lily 100', 'Walker 100', 'lily100@example.com', 'Address 100', 'Phone 100', 'Employee');
+
+INSERT INTO branchs (id, branch_name, branch_code, address, phone_number)
+VALUES
+(1, 'Main Branch', 12345, '123 Main St', '555-1234'),
+(2, 'North Branch', 67890, '456 North St', '555-6789'),
+(3, 'East Branch', 23456, '789 East St', '555-2345'),
+(4, 'West Branch', 78901, '987 West St', '555-7890'),
+(5, 'South Branch', 34567, '654 South St', '555-3456'),
+(6, 'Central Branch', 89012, '321 Central St', '555-8901'),
+(7, 'Downtown Branch', 45678, '876 Downtown St', '555-4567'),
+(8, 'Suburban Branch', 90123, '543 Suburban St', '555-9012'),
+(9, 'Rural Branch', 56789, '210 Rural St', '555-5678'),
+(10, 'Urban Branch', 12345, '987 Urban St', '555-1234'),
+(11, 'Tech Park Branch', 67890, '654 Tech Park St', '555-6789'),
+(12, 'Financial District Branch', 23456, '321 Financial St', '555-2345'),
+(13, 'Shopping Mall Branch', 78901, '876 Mall St', '555-7890'),
+(14, 'Industrial Area Branch', 34567, '543 Industrial St', '555-3456'),
+(15, 'Residential Area Branch', 89012, '210 Residential St', '555-8901'),
+(16, 'Medical Center Branch', 45678, '987 Medical St', '555-4567'),
+(17, 'Educational Zone Branch', 90123, '654 Education St', '555-9012'),
+(18, 'Sports Complex Branch', 56789, '321 Sports St', '555-5678'),
+(19, 'Cultural Center Branch', 12345, '876 Culture St', '555-1234'),
+(20, 'Green Park Branch', 67890, '543 Green St', '555-6789'),
+(21, 'Tech Hub Branch', 34567, '111 Tech Hub St', '555-1111'),
+(22, 'Innovation Park Branch', 89012, '222 Innovation Park St', '555-2222'),
+(23, 'Financial Hub Branch', 45678, '333 Financial Hub St', '555-3333'),
+(24, 'Business District Branch', 90123, '444 Business District St', '555-4444'),
+(25, 'Shopping Center Branch', 56789, '555 Shopping Center St', '555-5555'),
+(26, 'Science Park Branch', 12345, '666 Science Park St', '555-6666'),
+(27, 'Technology Square Branch', 67890, '777 Technology Square St', '555-7777'),
+(28, 'Entertainment Zone Branch', 23456, '888 Entertainment Zone St', '555-8888'),
+(29, 'Healthcare Hub Branch', 78901, '999 Healthcare Hub St', '555-9999'),
+(30, 'Art District Branch', 34567, '101 Art District St', '555-1010');
