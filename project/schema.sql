@@ -45,8 +45,8 @@ CREATE TABLE accounts(
     "account_number" VARCHAR(20) NOT NULL,
     "account_type" VARCHAR(20) NOT NULL,
     "current_balance" NUMERIC(10,2) NOT NULL,
-    "open_date" DATETIME DEFAULT TIMESTAMP NOT NULL,
-    "close_date" DATETIME DEFAULT TIMESTAMP DEFAULT NULL,
+    "open_date" DATETIME DEFAULT DATETIME NOT NULL,
+    "close_date" DATETIME DEFAULT DATETIME DEFAULT NULL,
     "account_status" VARCHAR(20) DEFAULT 'active' NOT NULL,
     "branch_id" INT,
     PRIMARY KEY ("account_id"),
@@ -55,6 +55,11 @@ CREATE TABLE accounts(
 );
 
 CREATE TABLE transactions(
-    "id" INT,
-    
+    "transaction_id" INT,
+    "employee_id" INT ,
+    "transaction_type" VARCHAR(20) NOT NULL,
+    "aomunt" NUMERIC(10,2) NOT NULL,
+    "date" DATETIME DEFAULT DATETIME NOT NULL,
+    PRIMARY KEY("transaction_id"),
+    FOREIGN KEY ("employee_id") REFERENCES employees("employee_id")
 )
