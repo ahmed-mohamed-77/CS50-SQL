@@ -93,7 +93,7 @@ CREATE TABLE loans(
 );
 
 CREATE TABLE loan_payments(
-    "loan_payment_id" INT,
+    "loan_payment_id" INT ,
     "scheduled_payment_date" DATETIME NOT NULL,
     "payment_amount" NUMERIC(10,2) NOT NULL,
     "principal_amount" NUMERIC(10,2) NOT NULL,
