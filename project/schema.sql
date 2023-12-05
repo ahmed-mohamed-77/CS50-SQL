@@ -19,14 +19,15 @@ CREATE TABLE employees(
     "branch_id" INT,
     "position" VARCHAR(25) NOT NULL,
     PRIMARY KEY ("employee_id"),
-    FOREIGN KEY "employee_id" REFERENCES people("id"),
-    FOREIGN KEY "branch_id" REFERENCES branchs("id")
+    FOREIGN KEY ("employee_id") REFERENCES people("id"),
+    FOREIGN KEY ("branch_id") REFERENCES branchs("id")
 );
 
 CREATE TABLE customers(
     "customer_id" INT,
     "customer_type" VARCHAR(25),
-    PRIMARY KEY ("customer_id")
+    PRIMARY KEY ("customer_id"),
+    FOREIGN KEY ("customer_id") REFERENCES people("id")
 );
 
 CREATE TABLE branchs(
@@ -47,6 +48,13 @@ CREATE TABLE accounts(
     "open_date" DATETIME DEFAULT TIMESTAMP NOT NULL,
     "close_date" DATETIME DEFAULT TIMESTAMP DEFAULT NULL,
     "account_status" VARCHAR(20) DEFAULT 'active' NOT NULL,
-    PRIMARY KEY("account_id"),
-    FOREIGN KEY("customer_id") REFERENCES customers("customer_id")
+    "branch_id" INT,
+    PRIMARY KEY ("account_id"),
+    FOREIGN KEY ("customer_id") REFERENCES customers("customer_id"),
+    FOREIGN KEY ("branch_id") REFERENCES branchs("id")
 );
+
+CREATE TABLE transactions(
+    "id" INT,
+    
+)
