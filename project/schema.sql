@@ -68,6 +68,7 @@ CREATE TABLE transactions(
 
 CREATE TABLE loans(
     "loan_id" INT,
+    "employee_id" INT,
     "customer_id" INT,
     "loan_payment_id" INT,
     "loan_type" VARCHAR(20) NOT NULL,
@@ -78,6 +79,7 @@ CREATE TABLE loans(
     "loan_status" VARCHAR(20) NOT NULL,
     PRIMARY KEY ("loan_id"),
     FOREIGN KEY ("customer_id") REFERENCES customers("customer_id"),
+    FOREIGN KEY ("employee_id") REFERENCES employees("employee_id"),
     FOREIGN KEY ("loan_payment_id") REFERENCES loan_payments("loan_payment_id")
 );
 
