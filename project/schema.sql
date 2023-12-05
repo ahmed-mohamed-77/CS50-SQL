@@ -3,11 +3,11 @@
 -- statements that compose it
 
 DROP TABLE IF EXISTS peoples;
+DROP TABLE IF EXISTS branchs;
 DROP TABLE IF EXISTS employees;
 DROP TABLE IF EXISTS customers;
-DROP TABLE IF EXISTS branchs;
-DROP TABLE IF EXISTS accounts;
 DROP TABLE IF EXISTS transactions;
+DROP TABLE IF EXISTS accounts;
 DROP TABLE IF EXISTS loans;
 DROP TABLE IF EXISTS loan_payments;
 
