@@ -45,4 +45,5 @@ CREATE TABLE accounts(
     "current_balance" NUMERIC(10,2),
     "open_date" DATETIME DEFAULT TIMESTAMP ,
     "close_date" DATETIME DEFAULT TIMESTAMP,
+    "account_status
 )
