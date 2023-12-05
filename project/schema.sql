@@ -42,6 +42,7 @@ CREATE TABLE branchs(
 CREATE TABLE accounts(
     "account_id" INT,
     "customer_id" INT,
+    "transaction_id" INT,
     "account_number" VARCHAR(20) NOT NULL,
     "account_type" VARCHAR(20) NOT NULL,
     "current_balance" NUMERIC(10,2) NOT NULL,
@@ -51,7 +52,8 @@ CREATE TABLE accounts(
     "branch_id" INT,
     PRIMARY KEY ("account_id"),
     FOREIGN KEY ("customer_id") REFERENCES customers("customer_id"),
-    FOREIGN KEY ("branch_id") REFERENCES branchs("id")
+    FOREIGN KEY ("branch_id") REFERENCES branchs("id"),
+    FOREIGN KEY ("transaction_id") REFERENCES transactions("transaction_id")
 );
 
 CREATE TABLE transactions(
