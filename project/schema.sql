@@ -242,7 +242,7 @@ VALUES
 
 
 -- Inserting data into employees table with positions
-INSERT INTO employees (position)
+INSERT INTO employees ("position")
 VALUES
 ('Manager'),
 ('Sales Associate'),
