@@ -3,7 +3,7 @@
 -- statements that compose it
 
 
-CREATE TABLE people(
+CREATE TABLE peoples(
     "id" INT,
     "first_name" VARCHAR(15) NOT NULL,
     "last_name" VARCHAR(15) NOT NULL,
@@ -13,13 +13,25 @@ CREATE TABLE people(
     "role" VARCHAR(9) CHECK("role" = 'Customer' OR "role" = 'Employee') NOT NULL,
 );
 
-CREATE TABLE employee(
+CREATE TABLE employees(
     "employee_id" INT,
     "branch_id" INT,
-    "position" VARCHAR(25) NOT NULL
+    "position" VARCHAR(25) NOT NULL,
+    PRIMARY KEY ("employee_id"),
+    FOREIGN KEY "employee_id" REFERENCES people("id")
+    FOREIGN KEY "branch_id" REFERENCES branchs("id")
 );
 
 CREATE TABLE customers(
     "customer_id" INT,
     "customer_type" VARCHAR(25)
+);
+
+CREATE TABLE branchs(
+    "id" INT,
+    "branch_name" VARCHAR(20) NOT NULL,
+    "branch_code" INT NOT NULL,
+    "address" VARCHAR(25) NOT NULL,
+    "phone_number" VARCHAR(15) NOT NULL,
+    PRIMARY KEY("id")
 )
