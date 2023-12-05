@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS loan_payments;
 
 
 CREATE TABLE peoples(
-    "id" INTEGER AUTOINCREMENT ,
+    "id" INTEGER ,
     "first_name" VARCHAR(15) NOT NULL,
     "last_name" VARCHAR(15) NOT NULL,
     "email" VARCHAR(55) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE peoples(
 );
 
 CREATE TABLE employees(
-    "employee_id" INTEGER AUTOINCREMENT ,
+    "employee_id" INTEGER ,
     "branch_id" INTEGER,
     "position" VARCHAR(25) NOT NULL,
     PRIMARY KEY ("employee_id", "branch_id"),
@@ -33,14 +33,14 @@ CREATE TABLE employees(
 );
 
 CREATE TABLE customers(
-    "customer_id" INTEGER AUTOINCREMENT ,
+    "customer_id" INTEGER ,
     "customer_type" VARCHAR(25),
     PRIMARY KEY ("customer_id"),
     FOREIGN KEY ("customer_id") REFERENCES people("id")
 );
 
 CREATE TABLE branchs(
-    "id" INTEGER AUTOINCREMENT ,
+    "id" INTEGER ,
     "branch_name" VARCHAR(20) NOT NULL,
     "branch_code" INTEGER NOT NULL,
     "address" VARCHAR(25) NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE branchs(
 );
 
 CREATE TABLE accounts(
-    "account_id" INTEGER AUTOINCREMENT ,
+    "account_id" INTEGER ,
     "customer_id" INTEGER,
     "transaction_id" INTEGER,
     "account_number" VARCHAR(20) NOT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE accounts(
 );
 
 CREATE TABLE transactions(
-    "transaction_id" INTEGER AUTOINCREMENT ,
+    "transaction_id" INTEGER ,
     "employee_id" INTEGER ,
     "transaction_type" VARCHAR(20) NOT NULL,
     "aomunt" NUMERIC(10,2) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE transactions(
 );
 
 CREATE TABLE loans(
-    "loan_id" INTEGER AUTOINCREMENT ,
+    "loan_id" INTEGER ,
     "employee_id" INTEGER,
     "customer_id" INTEGER,
     "loan_payment_id" INTEGER,
@@ -93,7 +93,7 @@ CREATE TABLE loans(
 );
 
 CREATE TABLE loan_payments(
-    "loan_payment_id" INTEGER AUTOINCREMENT ,
+    "loan_payment_id" INTEGER ,
     "scheduled_payment_date" DATETIME NOT NULL,
     "payment_amount" NUMERIC(10,2) NOT NULL,
     "principal_amount" NUMERIC(10,2) NOT NULL,
