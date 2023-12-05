@@ -40,10 +40,13 @@ CREATE TABLE branchs(
 
 CREATE TABLE accounts(
     "account_id" INT,
-    "account_number" VARCHAR(20),
-    "account_type" VARCHAR(20),
-    "current_balance" NUMERIC(10,2),
-    "open_date" DATETIME DEFAULT TIMESTAMP ,
-    "close_date" DATETIME DEFAULT TIMESTAMP,
-    "account_status
-)
+    "customer_id" INT,
+    "account_number" VARCHAR(20) NOT NULL,
+    "account_type" VARCHAR(20) NOT NULL,
+    "current_balance" NUMERIC(10,2) NOT NULL,
+    "open_date" DATETIME DEFAULT TIMESTAMP NOT NULL,
+    "close_date" DATETIME DEFAULT TIMESTAMP DEFAULT NULL,
+    "account_status" VARCHAR(20) DEFAULT 'active' NOT NULL,
+    PRIMARY KEY("account_id"),
+    FOREIGN KEY("customer_id") REFERENCES customers("customer_id")
+);
