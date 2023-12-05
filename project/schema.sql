@@ -64,4 +64,4 @@ CREATE TABLE transactions(
     "date" DATETIME DEFAULT DATETIME NOT NULL,
     PRIMARY KEY("transaction_id"),
     FOREIGN KEY ("employee_id") REFERENCES employees("employee_id")
-)
+);
