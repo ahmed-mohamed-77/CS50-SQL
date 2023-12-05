@@ -13,7 +13,7 @@ CREATE TABLE peoples(
     "role" VARCHAR(9) CHECK("role" = 'Customer' OR "role" = 'Employee') NOT NULL,
     PRIMARY KEY ("id")
 );
-IF peoples("role") = 'Employee' THEN
+
 CREATE TABLE employees(
     "employee_id" INT,
     "branch_id" INT,
@@ -36,4 +36,13 @@ CREATE TABLE branchs(
     "address" VARCHAR(25) NOT NULL,
     "phone_number" VARCHAR(15) NOT NULL,
     PRIMARY KEY("id")
+);
+
+CREATE TABLE accounts(
+    "account_id" INT,
+    "account_number" VARCHAR(20),
+    "account_type" VARCHAR(20),
+    "current_balance" NUMERIC(10,2),
+    "open_date" DATETIME DEFAULT TIMESTAMP ,
+    "close_date" DATETIME DEFAULT TIMESTAMP,
 )
