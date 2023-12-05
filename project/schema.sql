@@ -91,5 +91,5 @@ CREATE TABLE loan_payments(
     "interest_amount" NUMERIC(10,2) NOT NULL,
     "paid_amount" NUMERIC(10,2) NOT NULL,
     "paid_date" DATETIME NOT NULL,
-    PRIMARY KEY("loan_payment_id"),
+    PRIMARY KEY("loan_payment_id")
 );
