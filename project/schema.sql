@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS loan_payments;
 
 
 CREATE TABLE peoples(
-    "id" INT AUTOINCREMENT ,
+    "id" INTEGER AUTOINCREMENT ,
     "first_name" VARCHAR(15) NOT NULL,
     "last_name" VARCHAR(15) NOT NULL,
     "email" VARCHAR(55) NOT NULL,
@@ -24,8 +24,8 @@ CREATE TABLE peoples(
 );
 
 CREATE TABLE employees(
-    "employee_id" INT AUTOINCREMENT ,
-    "branch_id" INT,
+    "employee_id" INTEGER AUTOINCREMENT ,
+    "branch_id" INTEGER,
     "position" VARCHAR(25) NOT NULL,
     PRIMARY KEY ("employee_id", "branch_id"),
     FOREIGN KEY ("employee_id") REFERENCES peoples("id"),
@@ -33,32 +33,32 @@ CREATE TABLE employees(
 );
 
 CREATE TABLE customers(
-    "customer_id" INT AUTOINCREMENT ,
+    "customer_id" INTEGER AUTOINCREMENT ,
     "customer_type" VARCHAR(25),
     PRIMARY KEY ("customer_id"),
     FOREIGN KEY ("customer_id") REFERENCES people("id")
 );
 
 CREATE TABLE branchs(
-    "id" INT AUTOINCREMENT ,
+    "id" INTEGER AUTOINCREMENT ,
     "branch_name" VARCHAR(20) NOT NULL,
-    "branch_code" INT NOT NULL,
+    "branch_code" INTEGER NOT NULL,
     "address" VARCHAR(25) NOT NULL,
     "phone_number" VARCHAR(15) NOT NULL,
     PRIMARY KEY("id")
 );
 
 CREATE TABLE accounts(
-    "account_id" INT AUTOINCREMENT ,
-    "customer_id" INT,
-    "transaction_id" INT,
+    "account_id" INTEGER AUTOINCREMENT ,
+    "customer_id" INTEGER,
+    "transaction_id" INTEGER,
     "account_number" VARCHAR(20) NOT NULL,
     "account_type" VARCHAR(20) NOT NULL,
     "current_balance" NUMERIC(10,2) NOT NULL,
     "open_date" DATETIME DEFAULT DATETIME NOT NULL,
     "close_date" DATETIME DEFAULT DATETIME DEFAULT NULL,
     "account_status" VARCHAR(20) DEFAULT 'active' NOT NULL,
-    "branch_id" INT,
+    "branch_id" INTEGER,
     PRIMARY KEY ("account_id"),
     FOREIGN KEY ("customer_id") REFERENCES customers("customer_id"),
     FOREIGN KEY ("branch_id") REFERENCES branchs("id"),
@@ -66,8 +66,8 @@ CREATE TABLE accounts(
 );
 
 CREATE TABLE transactions(
-    "transaction_id" INT AUTOINCREMENT ,
-    "employee_id" INT ,
+    "transaction_id" INTEGER AUTOINCREMENT ,
+    "employee_id" INTEGER ,
     "transaction_type" VARCHAR(20) NOT NULL,
     "aomunt" NUMERIC(10,2) NOT NULL,
     "date" DATETIME DEFAULT DATETIME NOT NULL,
@@ -76,10 +76,10 @@ CREATE TABLE transactions(
 );
 
 CREATE TABLE loans(
-    "loan_id" INT AUTOINCREMENT ,
-    "employee_id" INT,
-    "customer_id" INT,
-    "loan_payment_id" INT,
+    "loan_id" INTEGER AUTOINCREMENT ,
+    "employee_id" INTEGER,
+    "customer_id" INTEGER,
+    "loan_payment_id" INTEGER,
     "loan_type" VARCHAR(20) NOT NULL,
     "loan_amount" NUMERIC(10,2) NOT NULL,
     "interset_rate" NUMERIC(10,2) NOT NULL,
@@ -93,7 +93,7 @@ CREATE TABLE loans(
 );
 
 CREATE TABLE loan_payments(
-    "loan_payment_id" INT AUTOINCREMENT ,
+    "loan_payment_id" INTEGER AUTOINCREMENT ,
     "scheduled_payment_date" DATETIME NOT NULL,
     "payment_amount" NUMERIC(10,2) NOT NULL,
     "principal_amount" NUMERIC(10,2) NOT NULL,
