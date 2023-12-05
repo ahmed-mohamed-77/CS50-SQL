@@ -65,3 +65,19 @@ CREATE TABLE transactions(
     PRIMARY KEY("transaction_id"),
     FOREIGN KEY ("employee_id") REFERENCES employees("employee_id")
 );
+
+CREATE TABLE loans(
+    "loan_id" INT,
+    "loan_type" VARCHAR(20) NOT NULL,
+    "loan_amount" NUMERIC(10,2) NOT NULL,
+    "interset_rate" NUMERIC(10,2) NOT NULL,
+    "start_date" DATETIME DEFAULT TIMESTAMP NOT NULL,
+    "end_date" DATETIME DEFAULT TIMESTAMP NOT NULL,
+    "loan_status" VARCHAR(20) NOT NULL,
+    PRIMARY KEY ("loan_id"),
+);
+
+CREATE TABLE loan_payments(
+    "loan_payment_id" INT,
+    "schadual_payment_date"
+)
