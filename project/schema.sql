@@ -11,20 +11,22 @@ CREATE TABLE peoples(
     "address" VARCHAR(60) NOT NULL,
     "phone" VARCHAR(15) NOT NULL,
     "role" VARCHAR(9) CHECK("role" = 'Customer' OR "role" = 'Employee') NOT NULL,
+    PRIMARY KEY ("id")
 );
-
+I
 CREATE TABLE employees(
     "employee_id" INT,
     "branch_id" INT,
     "position" VARCHAR(25) NOT NULL,
     PRIMARY KEY ("employee_id"),
-    FOREIGN KEY "employee_id" REFERENCES people("id")
+    FOREIGN KEY "employee_id" REFERENCES people("id"),
     FOREIGN KEY "branch_id" REFERENCES branchs("id")
 );
 
 CREATE TABLE customers(
     "customer_id" INT,
-    "customer_type" VARCHAR(25)
+    "customer_type" VARCHAR(25),
+    PRIMARY KEY ("customer_id")
 );
 
 CREATE TABLE branchs(
