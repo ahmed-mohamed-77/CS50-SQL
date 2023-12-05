@@ -75,9 +75,17 @@ CREATE TABLE loans(
     "end_date" DATETIME DEFAULT TIMESTAMP NOT NULL,
     "loan_status" VARCHAR(20) NOT NULL,
     PRIMARY KEY ("loan_id"),
+    
 );
 
 CREATE TABLE loan_payments(
     "loan_payment_id" INT,
-    "schadual_payment_date"
-)
+    "scheduled_payment_date" DATETIME NOT NULL,
+    "payment_amount" NUMERIC(10,2) NOT NULL,
+    "principal_amount" NUMERIC(10,2) NOT NULL,
+    "interest_amount" NUMERIC(10,2) NOT NULL,
+    "paid_amount" NUMERIC(10,2) NOT NULL,
+    "paid_date" DATETIME NOT NULL,
+    PRIMARY KEY("loan_payment_id"),
+
+);
