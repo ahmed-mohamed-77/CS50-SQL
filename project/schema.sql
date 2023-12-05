@@ -10,5 +10,5 @@ CREATE TABLE people(
     "email" VARCHAR(55) NOT NULL,
     "address" VARCHAR(60) NOT NULL,
     "phone" VARCHAR(15) NOT NULL,
-    "role" ENUM()
+    "role" CHECK("role" = 'Customer' OR "role" = 'Employee')
 )
