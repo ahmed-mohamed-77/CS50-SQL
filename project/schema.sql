@@ -502,4 +502,6 @@ FROM
 JOIN
     customers AS C ON C.customer_id = P.id
 JOIN
-    employees AS E ON E.employee_id = P.id
+    accounts AS A ON A.account_id = C.customer_id
+JOIN
+    branchs AS B ON E.branch_id = B.id;;
