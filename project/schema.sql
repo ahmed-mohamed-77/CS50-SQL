@@ -477,4 +477,5 @@ JOIN
     transactions AS T ON A.transaction_id = T.transaction_id;
 
 
-CREATE VIEW account_tracing AS
+CREATE VIEW which_branch AS
+SELECT 
