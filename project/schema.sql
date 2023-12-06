@@ -483,9 +483,9 @@ SELECT
     B.branch_name,B.branch_code,P.first_name,
     P.last_name,C.customer_type
 FROM
-    customers AS C
+    peoples AS P
 JOIN
-    peoples AS P ON C.customer_id = P.id
+    customers AS C ON C.customer_id = P.id
 JOIN
     employees AS E ON E.employee_id = P.id
 JOIN
