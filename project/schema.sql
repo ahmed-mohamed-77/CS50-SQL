@@ -487,4 +487,6 @@ FROM
 JOIN
     peoples AS P ON C.customer_id = P.id
 JOIN
-    employees AS E ON 
+    employees AS E ON E.employee_id = P.id
+JOIN
+    branchs AS B ON E.branch_id = B.id
