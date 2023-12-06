@@ -482,4 +482,9 @@ SELECT
     P.id AS "Customer_id",B.id AS "Branch_id",
     B.branch_name,B.branch_code,P.first_name,
     P.last_name,C.customer_type,
-FROM 
+FROM
+    customers AS C
+JOIN
+    peoples AS P ON C.customer_id = P.id
+JOIN
+    employees AS E ON 
