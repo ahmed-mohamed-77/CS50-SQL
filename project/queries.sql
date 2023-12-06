@@ -13,3 +13,10 @@ ADD CONSTRAINT fk_people_id FOREIGN KEY ("people_id") REFERENCES peoples("id");
 ALTER TABLE branchs
 DROP COLUMN "people_id" INTEGER;
 
+-- testing my views
+SELECT * FROM account_tracing;
+SELECT * FROM which_branch;
+
+-- join my view
+
+SELECT * FROM 
