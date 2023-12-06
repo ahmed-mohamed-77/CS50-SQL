@@ -9,3 +9,6 @@ ADD COLUMN "people_id" INTEGER;
 -- Add the foreign key constraint
 ALTER TABLE branchs
 ADD CONSTRAINT fk_people_id FOREIGN KEY ("people_id") REFERENCES peoples("id");
+
+ALTER TABLE branchs
+ADD  FOREIGN KEY ("people_id") REFERENCES peoples("id");
