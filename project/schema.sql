@@ -468,6 +468,10 @@ VALUES
     (99, 50, 'ACCT1050', 'Checking', 6500.50, 2, 'active');
 
 
-CREATE VIEW account_activity AS
+CREATE VIEW account_tracing AS
 SELECT
-    "account_id", "customer_id", "transaction_id",  "employee_id", 
+    A.account_id, A.customer_id, A.transaction_id,  T.employee_id, T.transaction_type, A.account_type
+FROM
+    accounts AS A
+JOIN
+    transactions AS T ON A.transaction_id = T.transaction_id;
