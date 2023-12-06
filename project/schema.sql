@@ -466,3 +466,8 @@ VALUES
     (95, 48, 'ACCT1048', 'Checking', 6000.00, 3, 'active'),
     (97, 49, 'ACCT1049', 'Savings', 6200.25, 1, 'active'),
     (99, 50, 'ACCT1050', 'Checking', 6500.50, 2, 'active');
+
+
+CREATE VIEW account_activity AS
+SELECT
+    "account_id", "customer_id", "transaction_id",  "employee_id", 
