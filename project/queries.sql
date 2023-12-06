@@ -19,4 +19,8 @@ SELECT * FROM which_branch;
 
 -- join my view
 
-SELECT * FROM 
+SELECT B.id AS "Branch_id", P.id AS "Customer_id",
+    B.branch_name,B.branch_code,P.first_name,
+    P.last_name,C.customer_type,E.employee_id FROM  which_branch
+JOIN
+    employees AS E ON E.branch_id = B.id;
