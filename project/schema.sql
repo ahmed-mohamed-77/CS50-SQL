@@ -478,4 +478,8 @@ JOIN
 
 
 CREATE VIEW which_branch AS
-SELECT 
+SELECT
+    P.id AS "Customer_id",B.id AS "Branch_id",
+    B.branch_name,B.branch_code,P.first_name,
+    P.last_name,C.customer_type,
+FROM 
