@@ -65,7 +65,7 @@ CREATE TABLE transactions (
     "amount" NUMERIC(10,2) NOT NULL,
     "date" DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     PRIMARY KEY("transaction_id"),
-    FOREIGN KEY ("employee_id") REFERENCES employees("employee_id") -- References "employee_id" column in employees table
+    FOREIGN KEY ("employee_id") REFERENCES employees("employee_id") 
 );
 
 CREATE TABLE accounts (
