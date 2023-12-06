@@ -65,7 +65,7 @@ CREATE TABLE transactions (
     "amount" NUMERIC(10,2) NOT NULL,
     "date" DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     PRIMARY KEY("transaction_id"),
-    FOREIGN KEY ("employee_id") REFERENCES employees("employee_id") 
+    FOREIGN KEY ("employee_id") REFERENCES employees("employee_id")
 );
 
 CREATE TABLE accounts (
@@ -415,3 +415,55 @@ VALUES
     (100, 'Deposit', 500.00, '2023-07-25 11:15:00');
 
 
+INSERT INTO accounts ("customer_id", "transaction_id", "account_number", "account_type", "current_balance", "branch_id", "account_status")
+VALUES
+    (1, 1, 'ACCT1001', 'Savings', 1500.25, 1, 'active'),
+    (3, 2, 'ACCT1002', 'Checking', 500.50, 2, 'active'),
+    (5, 3, 'ACCT1003', 'Savings', 2000.75, 3, 'active'),
+    (7, 4, 'ACCT1004', 'Checking', 100.00, 1, 'active'),
+    (9, 5, 'ACCT1005', 'Savings', 3500.25, 2, 'active'),
+    (11, 6, 'ACCT1006', 'Checking', 800.50, 3, 'active'),
+    (13, 7, 'ACCT1007', 'Savings', 6000.75, 1, 'active'),
+    (15, 8, 'ACCT1008', 'Checking', 1200.25, 2, 'active'),
+    (17, 9, 'ACCT1009', 'Savings', 250.50, 3, 'active'),
+    (19, 10, 'ACCT1010', 'Checking', 3000.75, 1, 'active'),
+    (21, 11, 'ACCT1011', 'Savings', 450.25, 2, 'active'),
+    (23, 12, 'ACCT1012', 'Checking', 700.50, 3, 'active'),
+    (25, 13, 'ACCT1013', 'Savings', 800.00, 1, 'active'),
+    (27, 14, 'ACCT1014', 'Checking', 1600.25, 2, 'active'),
+    (29, 15, 'ACCT1015', 'Savings', 1000.50, 3, 'active'),
+    (31, 16, 'ACCT1016', 'Checking', 2000.75, 1, 'active'),
+    (34, 17, 'ACCT1017', 'Savings', 300.25, 2, 'active'),
+    (36, 18, 'ACCT1018', 'Checking', 4500.50, 3, 'active'),
+    (38, 19, 'ACCT1019', 'Savings', 700.75, 1, 'active'),
+    (40, 20, 'ACCT1020', 'Checking', 850.00, 2, 'active'),
+    (42, 21, 'ACCT1021', 'Savings', 1200.25, 3, 'active'),
+    (44, 22, 'ACCT1022', 'Checking', 1500.50, 1, 'active'),
+    (46, 23, 'ACCT1023', 'Savings', 1800.75, 2, 'active'),
+    (48, 24, 'ACCT1024', 'Checking', 200.00, 3, 'active'),
+    (50, 25, 'ACCT1025', 'Savings', 3000.25, 1, 'active'),
+    (52, 26, 'ACCT1026', 'Checking', 500.50, 2, 'active'),
+    (54, 27, 'ACCT1027', 'Savings', 700.75, 3, 'active'),
+    (56, 28, 'ACCT1028', 'Checking', 900.00, 1, 'active'),
+    (58, 29, 'ACCT1029', 'Savings', 1200.25, 2, 'active'),
+    (60, 30, 'ACCT1030', 'Checking', 1500.50, 3, 'active'),
+    (62, 31, 'ACCT1031', 'Savings', 1800.75, 1, 'active'),
+    (64, 32, 'ACCT1032', 'Checking', 2000.00, 2, 'active'),
+    (66, 33, 'ACCT1033', 'Savings', 2200.25, 3, 'active'),
+    (68, 34, 'ACCT1034', 'Checking', 2500.50, 1, 'active'),
+    (70, 35, 'ACCT1035', 'Savings', 2800.75, 2, 'active'),
+    (72, 36, 'ACCT1036', 'Checking', 3000.00, 3, 'active'),
+    (74, 37, 'ACCT1037', 'Savings', 3200.25, 1, 'active'),
+    (76, 38, 'ACCT1038', 'Checking', 3500.50, 2, 'active'),
+    (78, 39, 'ACCT1039', 'Savings', 3700.75, 3, 'active'),
+    (80, 40, 'ACCT1040', 'Checking', 4000.00, 1, 'active'),
+    (81, 41, 'ACCT1041', 'Savings', 4200.25, 2, 'active'),
+    (83, 42, 'ACCT1042', 'Checking', 4500.50, 3, 'active'),
+    (85, 43, 'ACCT1043', 'Savings', 4800.75, 1, 'active'),
+    (87, 44, 'ACCT1044', 'Checking', 5000.00, 2, 'active'),
+    (89, 45, 'ACCT1045', 'Savings', 5200.25, 3, 'active'),
+    (91, 46, 'ACCT1046', 'Checking', 5500.50, 1, 'active'),
+    (93, 47, 'ACCT1047', 'Savings', 5800.75, 2, 'active'),
+    (95, 48, 'ACCT1048', 'Checking', 6000.00, 3, 'active'),
+    (97, 49, 'ACCT1049', 'Savings', 6200.25, 1, 'active'),
+    (99, 50, 'ACCT1050', 'Checking', 6500.50, 2, 'active');
