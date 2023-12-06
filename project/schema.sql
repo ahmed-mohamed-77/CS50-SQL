@@ -491,3 +491,4 @@ JOIN
 JOIN
     branchs AS B ON A.branch_id = B.id;
 
+CREATE INDEX peoples_names ON peoples("id","first_name", "last_name");
