@@ -251,7 +251,6 @@ VALUES
 ( 'Art District Branch', 34567, '101 Art District St', '555-1010');
 
 
--- Inserting data into employees table with positions
 INSERT INTO employees ("employee_id", "branch_id", "position")
 VALUES
 (2,1,'Manager'),
