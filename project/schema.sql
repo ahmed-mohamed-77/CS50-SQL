@@ -58,6 +58,16 @@ CREATE TABLE transactions (
     FOREIGN KEY ("employee_id") REFERENCES employees("employee_id")
 );
 
+CREATE TABLE transactions (
+    "transaction_id" INTEGER ,
+    "employee_id" INTEGER ,
+    "transaction_type" VARCHAR(20) NOT NULL,
+    "amount" NUMERIC(10,2) NOT NULL,
+    "date" DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    PRIMARY KEY("transaction_id"),
+    FOREIGN KEY ("employee_id") REFERENCES employees("employee_id") -- References "employee_id" column in employees table
+);
+
 CREATE TABLE accounts (
     "account_id" INTEGER ,
     "customer_id" INTEGER,
