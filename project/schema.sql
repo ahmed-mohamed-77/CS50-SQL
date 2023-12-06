@@ -491,3 +491,15 @@ JOIN
 JOIN
     branchs AS B ON E.branch_id = B.id;
 
+
+SELECT
+    P.id AS "Customer_id",
+    P.first_name,
+    P.last_name,
+    C.customer_type
+FROM
+    peoples AS P
+JOIN
+    customers AS C ON C.customer_id = P.id
+JOIN
+    employees AS E ON E.employee_id = P.id
