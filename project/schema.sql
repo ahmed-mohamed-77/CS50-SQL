@@ -479,14 +479,9 @@ JOIN
 
 CREATE VIEW which_branch AS
 SELECT
-    P.id AS "Customer_id",
-    B.id AS "Branch_id",
-    E.employee_id,
-    B.branch_name,
-    B.branch_code,
-    P.first_name,
-    P.last_name,
-    C.customer_type
+    P.id AS "Customer_id",B.id AS "Branch_id",E.employee_id
+    B.branch_name,B.branch_code,P.first_name,
+    P.last_name,C.customer_type,
 FROM
     customers AS C
 JOIN
@@ -495,3 +490,4 @@ JOIN
     employees AS E ON E.employee_id = P.id
 JOIN
     branchs AS B ON E.branch_id = B.id;
+
