@@ -4,4 +4,5 @@ January 1st, 2000. Return the columns with the name “Average Height” and
 “Average Weight”, respectively.
 
 
-SELECT ROUND(AVG(height), 2), ROUND(AVG(weight), 2)
+SELECT ROUND(AVG(height), 2), ROUND(AVG(weight), 2) FROM players
+
