@@ -1,0 +1,2 @@
+SELECT "0m" FROM Normals
+ORDER BY
