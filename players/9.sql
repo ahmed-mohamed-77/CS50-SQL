@@ -3,4 +3,5 @@ Sort the results alphabetically by first name, then by last name
 
 
 SELECT first_name, last_name FROM players
-WHERE 
+WHERE STRFTIME('%Y',final_game) = 2022
+ORDER BY first_name ASC, last_name ASC;
