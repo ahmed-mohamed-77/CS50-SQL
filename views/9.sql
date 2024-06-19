@@ -1,3 +1,3 @@
 SELECT english_title, artist
 FROM views
-WHERE MAX();
+WHERE brightnessMAX(brightness);
