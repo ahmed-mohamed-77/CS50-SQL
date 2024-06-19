@@ -1,3 +1,0 @@
-SELECT * FROM episodes
-WHERE "air_date" BETWEEN '2005-01-01'
-AND '2013-12-31';
