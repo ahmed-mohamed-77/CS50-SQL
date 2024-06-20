@@ -20,3 +20,6 @@ WHERE P.first_name = 'Satchel' ;
 SELECT * FROM salaries
 WHERE player_id IN (SELECT id FROM players WHERE first_name = 'Satchel' AND last_name = 'Paige');
 
+SELECT * FROM salaries
+WHERE player_id = (SELECT id FROM players WHERE first_name = 'Satchel' AND last_name = 'Paige');
+
