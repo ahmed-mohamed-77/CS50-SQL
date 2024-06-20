@@ -4,16 +4,6 @@ JOIN performances AS P ON T.id = P.team_id
 WHERE "H" = (
     SELECT MAX(H) FROM performances
     WHERE "year" = 2001
-);
-
-SELECT * FROM performances
-WHERE "H" = (
-    SELECT MAX(H) FROM performances
-    WHERE "year" = 2001
-);
-
-
-SELECT * FROM performances
-WHERE "H" = (
-    SELECT MAX(H) FROM performances
-);
+    )
+ORDER BY S.salary DESC
+LIMIT 1;
