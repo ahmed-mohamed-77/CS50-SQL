@@ -1,5 +1,4 @@
-SELECT "first_name","last_name" FROM players
-
-
+SELECT "name" FROM teams
+WHERE 
 
 WHERE "first_name" = 'Satchel' AND "last_name" = 'Paige';
