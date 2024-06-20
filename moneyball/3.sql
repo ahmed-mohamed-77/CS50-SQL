@@ -1,9 +1,9 @@
 SELECT "year", "HR" FROM performances
 WHERE player_id = (
     SELECT "id" FROM players
-    WHERE "first_name" = 'Cal' AND "last_name" = 'Ripken')
+    WHERE "first_name" = 'Ken' AND "last_name" = 'Griffey' AND "birth_year" = 1969)
 ORDER BY "year" DESC;
 
 
-SELECT first_name, last_name from players
-WHERE first_name = 'Ken' AND last_name IN ('%Jr%', '%jr%', '%JR%') ;
+SELECT "first_name", "last_name", "birth_year" from players
+WHERE "first_name" = 'Ken' AND "last_name" = 'Griffey' AND "birth_year" = 1969;
