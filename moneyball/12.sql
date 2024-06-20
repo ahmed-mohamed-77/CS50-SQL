@@ -1,35 +1,26 @@
-WITH PlayerCostPerHit AS (
-    SELECT
-        P.id,
-        P.first_name,
-        P.last_name,
-        (S.salary * 1.0 / PF.H) AS cost_per_hit
-    FROM players AS P
-    JOIN salaries AS S ON P.id = S.player_id
-    JOIN performances AS PF ON P.id = PF.player_id
-    WHERE S.year = 2001 AND PF.year = 2001
-    ORDER BY cost_per_hit ASC
-    LIMIT 10
-),
-PlayerCostPerRBI AS (
-    SELECT
-        P.id,
-        P.first_name,
-        P.last_name,
-        (S.salary * 1.0 / PF.RBI) AS cost_per_rbi
-    FROM players AS P
-    JOIN salaries AS S ON P.id = S.player_id
-    JOIN performances AS PF ON P.id = PF.player_id
-    WHERE S.year = 2001 AND PF.year = 2001
-    ORDER BY cost_per_rbi ASC
+SELECT * FROM (
+    SELECT "first_name", "last_name"
+    FROM "salaries"
+    JOIN "players" ON
+        "players"."id" = "salaries"."player_id"
+    JOIN "performances" ON
+        "salaries"."player_id" = "performances"."player_id" AND "salaries"."year" = "performances"."year"
+    WHERE "H" > 0 AND "salaries"."year" = 2001
+    ORDER BY ("salary" / "H"), "first_name", "last_name"
     LIMIT 10
 )
-SELECT DISTINCT
-    first_name,
-    last_name
-FROM (
-    SELECT first_name, last_name FROM PlayerCostPerHit
-    UNION
-    SELECT first_name, last_name FROM PlayerCostPerRBI
+
+INTERSECT
+
+SELECT * FROM (
+    SELECT "first_name", "last_name"
+    FROM "salaries"
+    JOIN "players" ON
+        "players"."id" = "salaries"."player_id"
+    JOIN "performances" ON
+        "salaries"."player_id" = "performances"."player_id" AND "salaries"."year" = "performances"."year"
+    WHERE "RBI" > 0 AND "salaries"."year" = 2001
+    ORDER BY ("salary" / "RBI"), "first_name", "last_name"
+    LIMIT 10
 )
-ORDER BY last_name;
+ORDER BY "last_name";
