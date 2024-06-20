@@ -1,5 +1,8 @@
-SELECT "year", "HR" FROM performances
-WHERE player_id = (
-    SELECT "id" FROM players
-    WHERE "first_name" = 'Ken' AND "last_name" = 'Griffey' AND "birth_year" = 1969)
-ORDER BY "year" DESC;
+SELECT
+    P.first_name, P.last_name, S.salary
+FROM performances AS P
+JOIN salaries AS S ON P.id = S.player_id
+WHERE S.year = 2001
+ORDER BY S.salary ASC, P.first_name ASC, P.last_name ASC, S.player_id ASC;
+
+
