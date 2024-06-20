@@ -1,8 +1,8 @@
-SELECT S.salary FROM salaries AS S
-JOIN teams AS T ON S.team_id = T.id
-JOIN performances AS P ON T.id = P.team_id
-WHERE "H" = (
-    SELECT MAX(H) FROM performances
-    ) AND S.year = 2001
-ORDER BY S.salary DESC
+SELECT S.salary
+FROM salaries AS S
+JOIN players AS P ON S.player_id = P.id
+JOIN performances AS PF ON P.id = PF.player_id
+WHERE PF.year = 2001
+  AND PF.H = (SELECT MAX(H) FROM performances WHERE year = 2001)
+  AND S.year = 2001
 LIMIT 1;
