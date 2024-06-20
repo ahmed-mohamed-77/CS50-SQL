@@ -24,6 +24,6 @@ SELECT * FROM salaries
 WHERE player_id = (SELECT id FROM players WHERE first_name = 'Satchel' AND last_name = 'Paige');
 
 SELECT * FROM salaries AS S
-JOIN players AS P ON S.player_id = P.id
+FULL OUTER JOIN players AS P ON S.player_id = P.id
 WHERE P.first_name = 'Satchel' AND P.last_name = 'Paige';
-Satchel Paige
+
