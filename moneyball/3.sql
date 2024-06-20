@@ -5,5 +5,4 @@ WHERE player_id = (
 ORDER BY "year" DESC;
 
 
-SELECT "first_name", "last_name", "birth_year" from players
-WHERE "first_name" = 'Ken' AND "last_name" = 'Griffey' AND "birth_year" = 1969;
+
