@@ -3,6 +3,6 @@ JOIN teams AS T ON S.team_id = T.id
 JOIN performances AS P ON T.id = P.team_id
 WHERE "H" = (
     SELECT MAX(H) FROM performances
-    ) AND "year" = 2001
+    ) AND S.year = 2001
 ORDER BY S.salary DESC
 LIMIT 1;
