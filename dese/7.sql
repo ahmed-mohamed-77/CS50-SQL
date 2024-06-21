@@ -1,2 +1,2 @@
-SELECT  * FROM districts
-WHERE "name" LIKE "%Cambridge%';
+SELECT  "name" FROM districts
+WHERE "name" = "Cambridge';
