@@ -1,2 +1,3 @@
 SELECT "name", "city" FROM schools
-WHERE "type" = 'Public School' AND "city" = 
+WHERE "type" = 'Public School' AND "city" =
+Massachusetts
