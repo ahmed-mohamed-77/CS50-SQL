@@ -1,4 +1,7 @@
 SELECT "name" FROM schools
-WHERE "type" IN ()
+WHERE "id" IN (
+    SELECT "school_id" FROM graduation_rates
+    WHERE "graduated" = 100
+);
 
-SELECT DISTINCT "type" FROM schools;
+
