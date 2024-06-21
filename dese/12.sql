@@ -7,3 +7,4 @@ WHERE E.per_pupil_expenditure > (
     SELECT AVG("exemplary") FROM staff_evaluations
 )
 GROUP BY D.name
+ORDER BY SE.exemplary DESC, SUM(E.per_pupil_expenditure) DESC;
