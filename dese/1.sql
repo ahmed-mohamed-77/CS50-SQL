@@ -1,3 +1,3 @@
 SELECT "name", "city" FROM schools
-WHERE "type" = 'Public School' AND "city" = 'Massachusetts';
+WHERE "type" = 'Charter School' ;
 
