@@ -53,5 +53,6 @@ WHERE P.from_address_id =(
 );
 
 
-SELECT * FROM "packages"
-WHERE id = 384
+SELECT * FROM "packages" WHERE id = 384;
+SELECT * FROM "packages" WHERE id = 2437;
+SELECT * FROM "packages" WHERE id = 3529;
