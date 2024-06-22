@@ -69,9 +69,9 @@ WHERE P.from_address_id = (
     SELECT "id"  FROM addresses
     WHERE "address" = '728 Maple Place'
 );
-SELECT * FROM "packages" AS P
-JOIN "drivers" AS D ON P.
-WHERE P.package_id = 9523 AND D.
+SELECT * FROM "scans" AS S
+JOIN "drivers" AS D ON S.driver_id =D.id
+WHERE S.package_id = 9523 ;
 -- *** The Forgotten Gift ***
 
 
