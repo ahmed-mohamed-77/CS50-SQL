@@ -34,7 +34,10 @@ JOIN  addresses AS A ON P.to_address_id = A.id
 WHERE P.from_address_id IS NULL;
 
 SELECT *  FROM addresses
-WHERE "id" = 50;
+WHERE "id" = 348;
+
+SELECT * FROM "scans"
+WHERE package_id = 5098
 -- *** The Forgotten Gift ***
 
 SELECT *  FROM addresses
@@ -42,6 +45,7 @@ WHERE "address" = '109 Tileston Street';
 
 SELECT *  FROM addresses
 WHERE "address" = '728 Maple Place';
+
 
 
 
