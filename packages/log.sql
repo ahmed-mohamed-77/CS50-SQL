@@ -14,6 +14,9 @@ WHERE "address" = '728 Maple Place';
 SELECT *  FROM addresses
 WHERE "address" = '900 Somerville Avenue';
 
+SELECT *  FROM addresses
+WHERE "address" = '2 Finnigan Street';
+
 SELECT * FROM "packages"
 WHERE "from_address_id" = (
     SELECT "id"  FROM addresses
