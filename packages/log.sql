@@ -81,6 +81,7 @@ JOIN "drivers" AS D ON S.driver_id =D.id
 WHERE S.package_id = 9523 AND D.name = 'Mikel';
 
 SELECT * FROM packages WHERE "from_address_id" = 7432;
+SELECT * FROM addresses WHERE "id" = 4983;
 -- *** The Forgotten Gift ***
 
 
