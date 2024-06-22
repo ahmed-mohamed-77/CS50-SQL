@@ -40,3 +40,6 @@ SELECT * FROM "scans"
 WHERE "address_id" = (
     SELECT "id"  FROM addresses
     WHERE "address" = '900 Somerville Avenue'
+
+SELECT * FROM "packages" AS P
+JOIN "addresses" AS A ON P.
