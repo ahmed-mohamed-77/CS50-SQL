@@ -42,4 +42,11 @@ WHERE "address_id" = (
     WHERE "address" = '900 Somerville Avenue'
 
 SELECT * FROM "packages" AS P
-JOIN "addresses" AS A ON P.
+JOIN "addresses" AS A ON P.from_address_id = D.id AND  P.to_address_id = D.id
+WHERE P.from_address_id =(
+    SELECT *  FROM addresses
+    WHERE "address" = '900 Somerville Avenue'
+) AND P.to_address_id =(
+    SELECT *  FROM addresses
+    WHERE "address" = '2 Finnigan Street'
+);
