@@ -69,7 +69,9 @@ WHERE P.from_address_id = (
     SELECT "id"  FROM addresses
     WHERE "address" = '728 Maple Place'
 );
-
+SELECT * FROM "packages" AS P
+JOIN 
+WHERE "package_id" = 9523 AND
 -- *** The Forgotten Gift ***
 
 
