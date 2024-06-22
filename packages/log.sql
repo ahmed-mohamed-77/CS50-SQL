@@ -43,7 +43,7 @@ WHERE "address_id" = (
 );
 
 SELECT * FROM "packages" AS P
-JOIN "addresses" AS A ON P.from_address_id = A.id 
+JOIN "addresses" AS A ON P.from_address_id = A.id
 WHERE P.from_address_id = (
     SELECT "id"  FROM addresses
     WHERE "address" = '900 Somerville Avenue'
@@ -56,3 +56,6 @@ WHERE P.from_address_id = (
 SELECT * FROM "packages" WHERE id = 384;
 SELECT * FROM "packages" WHERE id = 2437;
 SELECT * FROM "packages" WHERE id = 3529;
+
+
+SELECT * FROM "scans" WHERE "package_id" = 384;
