@@ -29,8 +29,9 @@ SELECT * FROM "scans" WHERE "package_id" = 384;
 -- *** The Devious Delivery ***
 
 
-SELECT * FROM "packages"
-WHERE "from_address_id" IS NULL;
+SELECT * FROM "packages" AS P
+JOIN  addresses AS A ON P.to_address_id = A.id
+WHERE P.from_address_id IS NULL;
 
 SELECT *  FROM addresses
 WHERE "id" = 50;
