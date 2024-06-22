@@ -61,7 +61,7 @@ SELECT * FROM addresses WHERE "id" = 4983;
 
 SELECT * FROM "packages" AS P
 JOIN "addresses" AS A ON P.from_address_id = A.id
-JOIN "scans" AS S ON
+JOIN "scans" AS S ON P.id = S.package_id
 WHERE P.from_address_id = (
     SELECT "id"  FROM addresses
     WHERE "address" = '109 Tileston Street'
