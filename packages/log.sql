@@ -79,6 +79,8 @@ JOIN "addresses" AS A ON P.from_address_id = A.id
 JOIN "scans" AS S ON P.id = S.package_id
 JOIN "drivers" AS D ON S.driver_id =D.id
 WHERE S.package_id = 9523 AND D.name = 'Mikel';
+
+SELECT * FROM packages WHERE "from_address_id" = 7432;
 -- *** The Forgotten Gift ***
 
 
