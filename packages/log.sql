@@ -19,3 +19,10 @@ WHERE "from_address_id" = (
 
 SELECT * FROM "packages"
 WHERE "from_address_id" = 9873;
+
+
+SELECT * FROM "scans"
+WHERE "from_address_id" = (
+    SELECT "id"  FROM addresses
+    WHERE "address_id" = '109 Tileston Street'
+);
