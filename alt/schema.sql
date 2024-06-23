@@ -10,12 +10,13 @@ CREATE TABLE IF NOT EXISTS "passengers" (
 CREATE TABLE IF NOT EXISTS "check_ins" (
     "id" INTEGER,
     "passenger_id" INTEGER,
-    "date" strftime("%d - %m - %Y", "date") NOT NULL,
-    "time" strftime("%I:%M:%S: %f", "time") NOT NULL,
+    "date" DATE NOT NULL,
+    "time" TIME NOT NULL,
 
     CONSTRAINT check_ins_pk PRIMARY KEY ("id"),
     CONSTRAINT check_ins_fk FOREIGN KEY ("passenger_id") REFERENCES "passengers"("id")
 );
+
 
 
 CREATE TABLE IF NOT EXISTS "airlines" (
@@ -28,7 +29,7 @@ CREATE TABLE IF NOT EXISTS "airlines" (
 
 
 CREATE TABLE IF NOT EXISTS "flights" (
-    "id" INTEGER PRIMARY KEY,
+    "id" INTEGER ,
     "flight_number" VARCHAR(50) NOT NULL,
     "airline_operation" VARCHAR(50) NOT NULL,
     "departing_from" VARCHAR(50) NOT NULL,
