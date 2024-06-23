@@ -18,17 +18,37 @@ CREATE TABLE IF NOT EXISTS "check_ins" (
 );
 
 
-Airlines
-ATL’s a hub for many domestic and international airlines: names like Delta, British Airways, Air France, Korean Air, and Turkish Airlines. The list goes on.
-So here’s what we track:
-
-The name of the airline
-The “concourse” or, shall I say, the section of our airport where the airline operates. We have 7 concourses: A, B, C, D, E, F, and T.
-
 CREATE TABLE IF NOT EXISTS "airlines" (
     "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
-    "section" CHECK ("section" IN (A, B, C, D, E, F,T))
+    "section" NOT NULL CHECK ("section" IN ('A', 'B', 'C', 'D', 'E', 'F', 'T')),
 
     CONSTRAINT airlines_pk PRIMARY KEY ("id"),
-)
+);
+
+
+Flights
+We serve as many as 1,000 flights daily. To ensure that our passengers are never left wondering, we need to
+give them all the critical details about their flight. Here’s what we’d like to store:
+
+The flight number. For example, “900”. Just know that we sometimes re-use flight numbers.
+The airline operating the flight. You can keep it simple and assume one flight is operated by one airline.
+The code of the airport they’re departing from. For example, “ATL” or “BOS”.
+The code of the airport they’re heading to
+The expected departure date and time (to the minute, of course!)
+The expected arrival date and time, to the very same accuracy
+
+
+CREATE TABLE IF NOT EXISTS "flights" (
+    "id" INTEGER,
+    "flight_number" varchar(50) NOT NULL,
+    "airline_operation" VARCHAR(50) NOT NULL,
+    "departing_from" VARCHAR(50) NOT NULL,
+    "heading_to" VARCHAR(50) NOT NULL,
+    "expected_departure" ,
+    "expected_arrival" ,
+
+    CONSTRAINT flights_pk PRIMARY KEY ("id"),
+);
+
+
