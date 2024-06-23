@@ -1,8 +1,9 @@
-Users
-The heart of LinkedIn’s platform is its people. Your database should be able to represent the following information about LinkedIn’s users:
+CREATE TABLE IF NOT EXISTS "users" (
+    "id" INTEGER,
+    "user_name" VARCHAR(100) NOT NULL,
+    "password" VARCHAR(30) NOT NULL,
 
-Their first and last name
-Their username
-Their password
-Keep in mind that, if a company is following best practices, application passwords are “hashed.” No need to worry about hashing passwords here, though.
+    CONSTRAINT user_pk PRIMARY KEY ("id")
+);
+
 
