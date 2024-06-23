@@ -37,3 +37,20 @@ We’d love to be able to keep track of those online orders. We think we would n
 An order number, to keep track of each order internally
 All the donuts in the order
 The customer who placed the order. We suppose we could assume only one customer places any given order.
+
+
+
+CREATE TABLE IF NOT EXISTS "customers"(
+    "id" INTEGER,
+    "first_name" VARCHAR(50) NOT NULL,
+    "last_name" VARCHAR(50) NOT NULL,
+
+    CONSTRAINT customer_PK PRIMARY KEY ("id")
+);
+
+CREATE TABLE IF NOT EXISTS "orders" (
+    "id" INTEGER,
+    "customer_id" INTEGER,
+    
+)
+
