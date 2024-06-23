@@ -26,3 +26,12 @@ CREATE TABLE IF NOT EXISTS "donuts" (
 
     CONSTRAINT donuts_PK PRIMARY KEY ("id")
 )
+
+
+CREATE TABLE IF NOT EXISTS "donuts_ingredients" (
+    "donuts_id" INTEGER,
+    "ingredients_id" INTEGER,
+
+    CONSTRAINT donuts_ingredients_PK PRIMARY KEY ( "donuts_id", "ingredients_id"),
+    CONSTRAINT donuts_FK FORIEGIN
+)
