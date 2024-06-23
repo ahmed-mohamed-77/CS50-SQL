@@ -9,13 +9,6 @@ CREATE TABLE IF NOT EXISTS "ingredients" (
 );
 
 
-    Donuts
-    We’ll need to include our selection of donuts, past and present! For each donut on the menu, we’d love to include three things:
-
-    The name of the donut
-    Whether the donut is gluten-free
-    The price per donut
-    Oh, and it’s important that we be able to look up the ingredients for each of the donuts!
 
 
 CREATE TABLE IF NOT EXISTS "donuts" (
@@ -25,7 +18,7 @@ CREATE TABLE IF NOT EXISTS "donuts" (
     "price" REAL NOT NULL,
 
     CONSTRAINT donuts_PK PRIMARY KEY ("id")
-)
+);
 
 
 CREATE TABLE IF NOT EXISTS "donuts_ingredients" (
@@ -33,5 +26,6 @@ CREATE TABLE IF NOT EXISTS "donuts_ingredients" (
     "ingredients_id" INTEGER,
 
     CONSTRAINT donuts_ingredients_PK PRIMARY KEY ( "donuts_id", "ingredients_id"),
-    CONSTRAINT donuts_FK FORIEGIN
-)
+    CONSTRAINT donuts_FK FOREIGN KEY ("donuts_id") REFERENCES "donuts"("donuts_id"),
+    CONSTRAINT ingredients_FK FOREIGN KEY ("ingredients_id") REFERENCES "ingredients"("ingredients_id")
+);
