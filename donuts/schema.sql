@@ -1,11 +1,26 @@
-Ingredients
-We certainly need to keep track of our ingredients. Some of the typical ingredients we
-use include flour, yeast, oil, butter, and several different types of sugar. Moreover, we would love to keep track of
-the price we pay per unit of ingredient (whether it’s pounds, grams, etc.).
 
 CREATE TABLE IF NOT EXISTS "ingredients" (
-    "id" INTEGER NOT NULL,
+    "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
     "unit" INTEGER NOT NULL,
-    "price_per_unit" 
+    "price_per_unit" REAL,
+
+    CONSTRAINT ingredients_PK PRIMARY KEY ("id")
+);
+
+
+Donuts
+We’ll need to include our selection of donuts, past and present! For each donut on the menu, we’d love to include three things:
+
+The name of the donut
+Whether the donut is gluten-free
+The price per donut
+Oh, and it’s important that we be able to look up the ingredients for each of the donuts!
+
+
+CREATE TABLE IF NOT EXISTS "donuts" (
+    "id" INTEGER,
+    "name" VARCHAR(50) NOT NULL,
+    "
+    CONSTRAINT donuts_PK PRIMARY KEY ("id")
 )
