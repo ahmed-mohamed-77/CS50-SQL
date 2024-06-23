@@ -31,14 +31,6 @@ CREATE TABLE IF NOT EXISTS "donuts_ingredients" (
 );
 
 
-We love to see customers in person, though we realize a good number of people might order online nowadays.
-We’d love to be able to keep track of those online orders. We think we would need to store:
-
-An order number, to keep track of each order internally
-All the donuts in the order
-The customer who placed the order. We suppose we could assume only one customer places any given order.
-
-
 
 CREATE TABLE IF NOT EXISTS "customers"(
     "id" INTEGER,
@@ -48,9 +40,20 @@ CREATE TABLE IF NOT EXISTS "customers"(
     CONSTRAINT customer_PK PRIMARY KEY ("id")
 );
 
+
+
 CREATE TABLE IF NOT EXISTS "orders" (
     "id" INTEGER,
     "customer_id" INTEGER,
-    
-)
 
+    CONSTRAINT order_pk PRIMARY KEY ("id")
+);
+
+
+CREATE TABLE IF NOT EXISTS "orders_donuts" (
+    "orders_id" INTEGER,
+    "donuts_id" INTEGER,
+    "quantity" INTEGER
+
+
+);
