@@ -53,7 +53,9 @@ CREATE TABLE IF NOT EXISTS "orders" (
 CREATE TABLE IF NOT EXISTS "orders_donuts" (
     "orders_id" INTEGER,
     "donuts_id" INTEGER,
-    "quantity" INTEGER
+    "quantity" INTEGER NOT NULL,
 
-
+    CONSTRAINT orders_donuts_pk PRIMARY KEY ("orders_id", "donuts_id"),
+    CONSTRAINT orders_id_fk FOREIGN KEY ("orders_id") REFERENCES "orders" ("id"),
+    CONSTRAINT donuts_id_fk FOREIGN KEY ("donuts_id") REFERENCES "donuts" ("id")
 );
