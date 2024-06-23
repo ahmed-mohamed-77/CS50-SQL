@@ -18,5 +18,10 @@ The flight they are checking in for, of course. Can’t lose track of where they
 
 CREATE TABLE IF NOT EXISTS "check_ins" (
     "id" INTEGER,
-    "date"
+    "passenger_id" INTEGER,
+    "date" strftime("%d - %m - %Y", "date") NOT NULL,
+    "time" strftime("%I:%M:%S: %f", "time") NOT NULL,
+
+    CONSTRAINT check_ins_pk PRIMARY KEY ("id"),
+    CONSTRAINT check_ins_fk FORIGEN KEY
 )
