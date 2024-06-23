@@ -5,5 +5,9 @@ the price we pay per unit of ingredient (whether it’s pounds, grams, etc.).
 
 CREATE TABLE IF NOT EXISTS "ingredients" (
     "id" INTEGER NOT NULL,
-    
+    "flour",
+    "yeast",
+    "oil",
+    "butter",
+    "sugar"
 )
