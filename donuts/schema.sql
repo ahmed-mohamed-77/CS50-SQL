@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS "customers"(
 CREATE TABLE IF NOT EXISTS "orders" (
     "id" INTEGER,
     "customer_id" INTEGER,
-
+    "order_date" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT order_pk PRIMARY KEY ("id")
 );
 
