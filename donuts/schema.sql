@@ -21,6 +21,7 @@ Oh, and it’s important that we be able to look up the ingredients for each of 
 CREATE TABLE IF NOT EXISTS "donuts" (
     "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
-    "
+    "gluten_free" INTEGER NOT NULL CHECK ("gluten_free" IN (0,1)),
+    
     CONSTRAINT donuts_PK PRIMARY KEY ("id")
 )
