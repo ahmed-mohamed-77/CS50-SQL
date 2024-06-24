@@ -23,30 +23,23 @@ SELECT
     CAST(long AS REAL)
 FROM "meteorites_temp";
 
-CREATE TRIGGER add_null
+CREATE TRIGGER add_null_and_round_decimal
 AFTER INSERT ON "meteorite"
 FOR EACH ROW
 BEGIN
     UPDATE "meteorite"
     SET
-        "mass" = CASE WHEN NEW."mass" = '' THEN NULL ELSE NEW."mass" END,
-        "year" = CASE WHEN NEW."year" = '' THEN NULL ELSE NEW."year" END,
-        "lat" = CASE WHEN NEW."lat" = '' THEN NULL ELSE NEW."lat" END,
-        "long" = CASE WHEN NEW."long" = '' THEN NULL ELSE NEW."long" END
+        "mass" = CASE
+                    WHEN NEW."mass" = '' THEN NULL
+                    ELSE ROUND(NEW."mass", 2)
+                 END,
+        "lat" = CASE
+                    WHEN NEW."lat" = '' THEN NULL
+                    ELSE ROUND(NEW."lat", 2)
+                END,
+        "long" = CASE
+                     WHEN NEW."long" = '' THEN NULL
+                     ELSE ROUND(NEW."long", 2)
+                 END
     WHERE "id" = NEW."id";
 END;
-
-CREATE TRIGGER round_decimal
-AFTER INSERT ON "meteorite"
-FOR EACH ROW
-BEGIN
-    UPDATE "meteorite"
-    SET
-        "mass" = CASE WHEN NEW."mass" = '' THEN NULL ELSE NEW."mass" END,
-        "lat" = CASE WHEN NEW."lat" = '' THEN NULL ELSE NEW."lat" END,
-        "long" = CASE WHEN NEW."long" = '' THEN NULL ELSE NEW."long" END
-    WHERE "id" = NEW."id";
-END;
-
-All columns with decimal values (e.g., 70.4777) should be rounded to the nearest hundredths place (e.g., 70.4777 becomes 70.48).
-Keep in mind that the mass, lat, and long columns have decimal values.
