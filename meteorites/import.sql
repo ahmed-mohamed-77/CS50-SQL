@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS "meteorite_temp" (
     "class" VARCHAR(15) NOT NULL,
     "mass" REAL ,
     "discovery" VARCHAR(25) ,
-    "year" REAL,
+    "year" INTEGER,
     "lat" REAL,
     "long" REAL,
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
@@ -28,7 +28,12 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
 );
 
 UPDATE "meteorite_temp"
-SET "year" = FLOOR("year");
+SET "lat" = ROUND("lat", 2);
+
+UPDATE "meteorite_temp"
+SET "long" = ROUND("long", 2);
+UPDATE "meteorite_temp"
+SET "long" = ROUND("long", 2);
 
 select * from meteorite_temp  where nametype = 'Relict';
 
