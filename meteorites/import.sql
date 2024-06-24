@@ -36,7 +36,7 @@ SET "long" = ROUND("long", 2);
 UPDATE "meteorite_temp"
 SET "mass" = ROUND("mass", 2);
 
-select * from meteorite_temp  where nametype = 'Relict';
+select * from meteorite_temp  where year = '';
 
 INSERT INTO "meteorite" ("name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT
