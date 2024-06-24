@@ -31,13 +31,15 @@ DROP TABLE "meteorites_temp";
 
 
 CREATE TABLE IF NOT EXISTS "meteorite_temp" (
-    "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
+    "id" INTEGER,
+    "nametype" VARCHAR(25),
     "class" VARCHAR(15) NOT NULL,
     "mass" REAL ,
-    "discovery" NOT NULL CHECK("discovery" IN ('Fell', 'Found')),
+    "discovery" VARCHAR(25) ,
     "year" REAL,
     "lat" REAL,
     "long" REAL,
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
+
