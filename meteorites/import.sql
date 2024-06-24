@@ -14,6 +14,17 @@ CREATE TABLE IF NOT EXISTS "meteorite_temp" (
 
 .import --csv --skip 1 meteorites.csv meteorite_temp
 
+CREATE TABLE IF NOT EXISTS "meteorite" (
+    "id" INTEGER,
+    "name" VARCHAR(50) NOT NULL,
+    "class" VARCHAR(15) NOT NULL,
+    "mass" REAL ,
+    "discovery" NOT NULL CHECK("discovery" IN ('Fell', 'Found')),
+    "year" REAL,
+    "lat" REAL,
+    "long" REAL,
+    CONSTRAINT meteorite_pk PRIMARY KEY ("id")
+);
 
 UPDATE "meteorite_temp"
 SET "lat" = ROUND("lat", 2);
@@ -24,7 +35,6 @@ SET "long" = ROUND("long", 2);
 UPDATE "meteorite_temp"
 SET "mass" = ROUND("mass", 2);
 
-select * from meteorite_temp  where year = '';
 
 INSERT INTO "meteorite" ("name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT
@@ -41,17 +51,7 @@ ORDER BY
     CAST(year AS REAL) ASC,
     name ASC;
 
-CREATE TABLE IF NOT EXISTS "meteorite" (
-    "id" INTEGER,
-    "name" VARCHAR(50) NOT NULL,
-    "class" VARCHAR(15) NOT NULL,
-    "mass" REAL ,
-    "discovery" NOT NULL CHECK("discovery" IN ('Fell', 'Found')),
-    "year" REAL,
-    "lat" REAL,
-    "long" REAL,
-    CONSTRAINT meteorite_pk PRIMARY KEY ("id")
-);
+
 
 
 DROP TABLE "meteorites_temp";
