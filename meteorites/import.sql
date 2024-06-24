@@ -42,12 +42,11 @@ SET "year" = NULLIF("year", ''),
     "mass" = NULLIF("mass", '');
 
 UPDATE  "meteorite_temp"
-SET "year" = NULLIF("year", 0),
-    "lat" = NULLIF("lat", 0),
+SET "lat" = NULLIF("lat", 0),
     "long" = NULLIF("long", 0),
     "mass" = NULLIF("mass", 0);
 
-
+SELECT * FROM meteorite_temp WHERE
 
 
 INSERT INTO "meteorite" ("id", "name", "class", "mass", "discovery", "year", "lat", "long")
