@@ -4,7 +4,7 @@ WHERE "username" = 'admin';
 
 
 UPDATE "user_logs"
-SET "new_password" = 'cb4772eeda0ae562119b6c4be2e0889a'
+SET "new_password" = '44bf025d27eea66336e5c1133c3827f7'
 WHERE "old_username" = 'admin' AND "new_username" = 'admin';
 
 DELETE FROM "user_logs"
