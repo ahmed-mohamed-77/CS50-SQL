@@ -36,11 +36,12 @@ UPDATE "meteorite_temp"
 SET "mass" = ROUND("mass", 2);
 
 
-INSERT INTO "meteorite" ("name", "class", "mass", "discovery", "year", "lat", "long")
+INSERT INTO "meteorite" ("id", "name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT
-    name,
-    class,
-    NULLIF(CAST(mass AS REAL), '') AS mass,
+    "id"
+    "name",
+    "class",
+    NULLIF(mass, '') AS mass,
     discovery,
     NULLIF(CAST(year AS REAL), '') AS year,
     NULLIF(CAST(lat AS REAL), '') AS lat,
