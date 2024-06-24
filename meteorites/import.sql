@@ -10,6 +10,8 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
 
+discovery, which is either “Fell” or “Found”.
+
 INSERT INTO "meteorite" ("id", "name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT
     CAST(id AS INTEGER),
