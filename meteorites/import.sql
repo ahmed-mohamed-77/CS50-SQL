@@ -26,46 +26,5 @@ ORDER BY
     CAST(year AS REAL) ASC,
     name ASC;
 
-CREATE TRIGGER add_null_and_round_decimal
-AFTER INSERT ON "meteorite"
-FOR EACH ROW
-BEGIN
-    UPDATE "meteorite"
-    SET
-        "mass" = CASE
-                    WHEN NEW."mass" = '' THEN NULL
-                    ELSE ROUND(NEW."mass", 2)
-                 END,
-        "lat" = CASE
-                    WHEN NEW."lat" = '' THEN NULL
-                    ELSE ROUND(NEW."lat", 2)
-                END,
-        "long" = CASE
-                     WHEN NEW."long" = '' THEN NULL
-                     ELSE ROUND(NEW."long", 2)
-                 END
-    WHERE "id" = NEW."id";
-END;
-
-CREATE TRIGGER round_decimal
-AFTER INSERT ON "meteorite"
-FOR EACH ROW
-BEGIN
-    UPDATE "meteorite"
-    SET
-        "mass" = CASE
-                    WHEN NEW."mass" IS NULL THEN NULL
-                    ELSE ROUND(NEW."mass", 2)
-                 END,
-        "lat" = CASE
-                    WHEN NEW."lat" IS NULL THEN NULL
-                    ELSE ROUND(NEW."lat", 2)
-                END,
-        "long" = CASE
-                     WHEN NEW."long" IS NULL THEN NULL
-                     ELSE ROUND(NEW."long", 2)
-                 END
-    WHERE "id" = NEW."id";
-END;
 
 DROP TABLE "meteorites_temp";
