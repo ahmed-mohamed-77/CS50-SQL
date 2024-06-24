@@ -4,17 +4,18 @@ CREATE TABLE IF NOT EXISTS "meteorite_temp" (
     "id" INTEGER,
     "nametype" VARCHAR(25),
     "class" VARCHAR(15) NOT NULL,
-    "mass" REAL ,
-    "discovery" VARCHAR(25) ,
+    "mass" REAL,
+    "discovery" VARCHAR(25),
     "year" INTEGER,
     "lat" REAL,
     "long" REAL,
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
 
+-- Step 2: Import CSV Data
+-- Note: The .import command is used in SQLite CLI, not in pure SQL.
 .import --csv --skip 1 meteorites.csv meteorite_temp
-first line in meteorites.csv
-name,id,nametype,class,mass,discovery,year,lat,long
+
 CREATE TABLE IF NOT EXISTS "meteorite" (
     "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
