@@ -27,6 +27,12 @@ CREATE TRIGGER add_null AFTER INSERT
 ON "meteorite"
 BEGIN
  -- Trigger logic goes here....
+    INSERT INTO "meteorite" ("mass", "year", "lat", "long")
+    VALUES ('insert',
+            NULL,
+            CASE WHEN "mass" = '' THEN NULL ELSE NEW.username END,
+            NULL,
+            CASE WHEN "year" = '' THEN NULL ELSE NEW.password END);
 
 
 END;
