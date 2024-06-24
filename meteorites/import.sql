@@ -50,9 +50,8 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
 );
 
 
-INSERT INTO "meteorite" ("id", "name", "class", "mass", "discovery", "year", "lat", "long")
+INSERT INTO "meteorite" ( "name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT
-    "id"
     "name",
     "class",
     "mass",
@@ -69,4 +68,4 @@ ORDER BY
 
 
 
-DROP TABLE "meteorites_temp";
+DROP TABLE "meteorite_temp";
