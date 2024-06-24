@@ -28,3 +28,16 @@ ORDER BY
 
 
 DROP TABLE "meteorites_temp";
+
+
+CREATE TABLE IF NOT EXISTS "meteorite_temp" (
+    "id" INTEGER,
+    "name" VARCHAR(50) NOT NULL,
+    "class" VARCHAR(15) NOT NULL,
+    "mass" REAL ,
+    "discovery" NOT NULL CHECK("discovery" IN ('Fell', 'Found')),
+    "year" REAL,
+    "lat" REAL,
+    "long" REAL,
+    CONSTRAINT meteorite_pk PRIMARY KEY ("id")
+);
