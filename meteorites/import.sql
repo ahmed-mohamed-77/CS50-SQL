@@ -23,8 +23,10 @@ SELECT
     CAST(long AS REAL)
 FROM "meteorites_temp";
 
+CREATE TRIGGER add_null AFTER INSERT
+ON "meteorite"
+BEGIN
+ -- Trigger logic goes here....
 
-CREATE TABLE IF NOT EXISTS "meteorites_temp"(
-"name" TEXT, "id" TEXT, "nametype" TEXT, "class" TEXT,
- "mass" TEXT, "discovery" TEXT, "year" TEXT, "lat" TEXT,
- "long" TEXT);
+
+END;
