@@ -1,4 +1,3 @@
-
 CREATE TABLE IF NOT EXISTS "meteorite_temp" (
     "name" VARCHAR(50) NOT NULL,
     "id" INTEGER,
