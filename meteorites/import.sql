@@ -12,8 +12,7 @@ CREATE TABLE IF NOT EXISTS "meteorite_temp" (
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
 
--- Step 2: Import CSV Data
--- Note: The .import command is used in SQLite CLI, not in pure SQL.
+
 .import --csv --skip 1 meteorites.csv meteorite_temp
 
 CREATE TABLE IF NOT EXISTS "meteorite" (
