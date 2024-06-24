@@ -35,5 +35,18 @@ BEGIN
         "long" = CASE WHEN NEW."long" = '' THEN NULL ELSE NEW."long" END
     WHERE "id" = NEW."id";
 END;
+
+CREATE TRIGGER round_decimal
+AFTER INSERT ON "meteorite"
+FOR EACH ROW
+BEGIN
+    UPDATE "meteorite"
+    SET
+        "mass" = CASE WHEN NEW."mass" = '' THEN NULL ELSE NEW."mass" END,
+        "lat" = CASE WHEN NEW."lat" = '' THEN NULL ELSE NEW."lat" END,
+        "long" = CASE WHEN NEW."long" = '' THEN NULL ELSE NEW."long" END
+    WHERE "id" = NEW."id";
+END;
+
 All columns with decimal values (e.g., 70.4777) should be rounded to the nearest hundredths place (e.g., 70.4777 becomes 70.48).
 Keep in mind that the mass, lat, and long columns have decimal values.
