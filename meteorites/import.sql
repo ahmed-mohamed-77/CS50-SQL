@@ -23,16 +23,15 @@ SELECT
     CAST(long AS REAL)
 FROM "meteorites_temp";
 
-CREATE TRIGGER add_null AFTER INSERT
-ON "meteorite"
+CREATE TRIGGER add_null
+AFTER INSERT ON "meteorite"
+FOR EACH ROW
 BEGIN
- -- Trigger logic goes here....
-    INSERT INTO "meteorite" ("mass", "year", "lat", "long")
-    VALUES ('insert',
-            NULL,
-            CASE WHEN "mass" = '' THEN NULL ELSE NEW.username END,
-            NULL,
-            CASE WHEN "year" = '' THEN NULL ELSE NEW.password END);
-
-
+    UPDATE "meteorite"
+    SET
+        "mass" = CASE WHEN NEW."mass" = '' THEN NULL ELSE NEW."mass" END,
+        "year" = CASE WHEN NEW."year" = '' THEN NULL ELSE NEW."year" END,
+        "lat" = CASE WHEN NEW."lat" = '' THEN NULL ELSE NEW."lat" END,
+        "long" = CASE WHEN NEW."long" = '' THEN NULL ELSE NEW."long" END
+    WHERE "id" = NEW."id";
 END;
