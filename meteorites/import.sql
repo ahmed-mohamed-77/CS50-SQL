@@ -27,7 +27,9 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
 
-UPDATE TABLE "meteorite_temp"
+SE
+
+UPDATE  "meteorite_temp"
 SET "lat" = ROUND("lat", 2),
     "long" = ROUND("long", 2),
     "mass" = ROUND("mass", 2);
