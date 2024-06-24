@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS "meteorite_temp" (
 );
 
 .import --csv --skip 1 meteorites.csv meteorite_temp
-
+first line in meteorites.csv
+name,id,nametype,class,mass,discovery,year,lat,long
 CREATE TABLE IF NOT EXISTS "meteorite" (
     "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
