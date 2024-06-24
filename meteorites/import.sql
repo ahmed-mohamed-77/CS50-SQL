@@ -32,7 +32,7 @@ UPDATE TABLE "meteorite_temp"
 SET "lat" = ROUND("lat", 2),
     "long" = ROUND("long", 2),
     "mass" = ROUND("mass", 2);
-mass, year, lat, and long
+
 
 UPDATE  "meteorite_temp"
 SET "year" = NULLIF("year", ''),
