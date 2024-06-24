@@ -1,3 +1,20 @@
+
+CREATE TABLE IF NOT EXISTS "meteorite_temp" (
+    "name" VARCHAR(50) NOT NULL,
+    "id" INTEGER,
+    "nametype" VARCHAR(25),
+    "class" VARCHAR(15) NOT NULL,
+    "mass" REAL ,
+    "discovery" VARCHAR(25) ,
+    "year" REAL,
+    "lat" REAL,
+    "long" REAL,
+    CONSTRAINT meteorite_pk PRIMARY KEY ("id")
+);
+
+.import --csv --skip 1 meteorites.csv meteorite_temp
+
+
 CREATE TABLE IF NOT EXISTS "meteorite" (
     "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
@@ -28,18 +45,3 @@ ORDER BY
 
 
 DROP TABLE "meteorites_temp";
-
-
-CREATE TABLE IF NOT EXISTS "meteorite_temp" (
-    "name" VARCHAR(50) NOT NULL,
-    "id" INTEGER,
-    "nametype" VARCHAR(25),
-    "class" VARCHAR(15) NOT NULL,
-    "mass" REAL ,
-    "discovery" VARCHAR(25) ,
-    "year" REAL,
-    "lat" REAL,
-    "long" REAL,
-    CONSTRAINT meteorite_pk PRIMARY KEY ("id")
-);
-
