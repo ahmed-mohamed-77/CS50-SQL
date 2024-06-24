@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
 );
 
 UPDATE "meteorite_temp"
-SET "year" = ROUND("year", 0);
+SET "year" = FLOOR("year");
 
 select * from meteorite_temp  where nametype = 'Relict';
 
