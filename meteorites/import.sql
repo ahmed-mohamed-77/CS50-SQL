@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "meteorite" (
-    "id" INTEGER
+    "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
     "class" VARCHAR(15) NOT NULL,
     "mass" REAL NOT NULL,
@@ -10,11 +10,6 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
 
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
-
-CREATE TABLE IF NOT EXISTS "meteorites_temp"(
-"name" TEXT, "id" TEXT, "nametype" TEXT, "class" TEXT,
- "mass" TEXT, "discovery" TEXT, "year" TEXT, "lat" TEXT,
- "long" TEXT);
 
 INSERT INTO "meteorite" ("id", "name" , "class" , "mass", "discovery", "year", "lat", "long")
 SELECT
