@@ -56,12 +56,12 @@ SELECT
     "id"
     "name",
     "class",
-    NULLIF(mass, '') AS mass,
-    discovery,
-    NULLIF(year , '') AS year,
-    NULLIF(lat , '') AS lat,
-    NULLIF(long , '') AS long
-FROM "meteorites_temp"
+    "mass",
+    "discovery",
+    "year" ,
+    "lat" ,
+    "long"
+FROM "meteorite_temp"
 WHERE nametype != 'Relict'
 ORDER BY
     CAST(year AS REAL) ASC,
