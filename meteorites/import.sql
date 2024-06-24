@@ -21,3 +21,9 @@ SELECT
     CAST(lat AS REAL),
     CAST(long AS REAL)
 FROM "meteorites_temp";
+
+
+CREATE TABLE IF NOT EXISTS "meteorites_temp"(
+"name" TEXT, "id" TEXT, "nametype" TEXT, "class" TEXT,
+ "mass" TEXT, "discovery" TEXT, "year" TEXT, "lat" TEXT,
+ "long" TEXT);
