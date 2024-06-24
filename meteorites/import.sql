@@ -33,6 +33,7 @@ SET "lat" = ROUND("lat", 2),
 mass, year, lat, and long
 
 SELECT * FROM meteorite_temp WHERE lat = 0 OR long = 0 OR year = 0 OR mass = 0;
+SELECT * FROM meteorite_temp WHERE lat = '' OR long = '' OR year = '' OR mass = '';
 
 UPDATE  "meteorite_temp"
 SET "year" = NULLIF("year", ''),
