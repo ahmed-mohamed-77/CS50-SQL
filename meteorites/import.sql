@@ -37,7 +37,7 @@ SELECT * FROM meteorite_temp WHERE "lat" = 0 OR"long"= 0 OR "mass"= 0 ;
 SELECT * FROM meteorite_temp WHERE "lat"= '' OR "long"= '' OR "mass"= ''OR "year" = '';
 
 
-CREATE TABLE IF NOT EXISTS "meteorite" (
+CREATE TABLE IF NOT EXISTS "meteorites" (
     "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
     "class" VARCHAR(15) NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
 );
 
 
-INSERT INTO "meteorite" ( "name", "class", "mass", "discovery", "year", "lat", "long")
+INSERT INTO "meteorites" ( "name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT
     "name",
     "class",
