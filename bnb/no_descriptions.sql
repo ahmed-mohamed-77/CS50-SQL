@@ -5,6 +5,5 @@ SELECT
     "host_name" ,
     "accommodates" ,
     "bedrooms"
-FROM "listing";
+FROM "listings";
 
-SELECT * FROM "no_descriptions" limit 50;
