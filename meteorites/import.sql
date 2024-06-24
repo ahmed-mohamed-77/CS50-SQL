@@ -11,4 +11,7 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
 
-SELECT INTO
+INSERT INTO "meteorite" ("id", "name" , "class" , "mass", "discovery", "year", "lat", "long")
+SELECT "id", "name", "class", "mass", "discovery", "year", "lat", "long" FROM "meteorites_temp";
+
+
