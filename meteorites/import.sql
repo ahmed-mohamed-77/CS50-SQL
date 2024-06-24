@@ -27,9 +27,10 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
 
-UPDATE 
+UPDATE "meteorite_temp"
+SET "year" = ROUND("year");
 
-
+select * from meteorite_temp  where nametype = 'Relict';
 
 INSERT INTO "meteorite" ("name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT
