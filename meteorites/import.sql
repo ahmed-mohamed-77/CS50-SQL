@@ -11,17 +11,20 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
 );
 
 
-INSERT INTO "meteorite" ("id", "name", "class", "mass", "discovery", "year", "lat", "long")
+INSERT INTO "meteorite" ("name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT
-    CAST(id AS INTEGER),
     name,
     class,
-    CAST(mass AS REAL),
+    NULLIF(CAST(mass AS REAL), '') AS mass,
     discovery,
-    CAST(year AS REAL),
-    CAST(lat AS REAL),
-    CAST(long AS REAL)
-FROM "meteorites_temp";
+    NULLIF(CAST(year AS REAL), '') AS year,
+    NULLIF(CAST(lat AS REAL), '') AS lat,
+    NULLIF(CAST(long AS REAL), '') AS long
+FROM "meteorites_temp"
+WHERE nametype != 'Relict'
+ORDER BY
+    CAST(year AS REAL) ASC,
+    name ASC;
 
 CREATE TRIGGER add_null_and_round_decimal
 AFTER INSERT ON "meteorite"
