@@ -43,9 +43,9 @@ SELECT
     "class",
     NULLIF(mass, '') AS mass,
     discovery,
-    NULLIF(CAST(year AS REAL), '') AS year,
-    NULLIF(CAST(lat AS REAL), '') AS lat,
-    NULLIF(CAST(long AS REAL), '') AS long
+    NULLIF(year , '') AS year,
+    NULLIF(lat , '') AS lat,
+    NULLIF(long , '') AS long
 FROM "meteorites_temp"
 WHERE nametype != 'Relict'
 ORDER BY
