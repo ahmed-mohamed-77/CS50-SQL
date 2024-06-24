@@ -32,8 +32,9 @@ SET "lat" = ROUND("lat", 2);
 
 UPDATE "meteorite_temp"
 SET "long" = ROUND("long", 2);
+
 UPDATE "meteorite_temp"
-SET "long" = ROUND("long", 2);
+SET "mass" = ROUND("mass", 2);
 
 select * from meteorite_temp  where nametype = 'Relict';
 
