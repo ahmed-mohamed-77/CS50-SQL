@@ -2,11 +2,11 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
     "id" INTEGER,
     "name" VARCHAR(50) NOT NULL,
     "class" VARCHAR(15) NOT NULL,
-    "mass" REAL NOT NULL,
+    "mass" REAL ,
     "discovery" NOT NULL CHECK("discovery" IN ('Fell', 'Found')),
-    "year" REAL NOT NULL,
-    "lat" REAL NOT NULL,
-    "long" REAL NOT NULL,
+    "year" REAL,
+    "lat" REAL,
+    "long" REAL,
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
 
