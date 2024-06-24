@@ -7,4 +7,4 @@ SELECT
     "bedrooms"
 FROM "listing";
 
-
+SELECT * FROM "no_descriptions" limit 50;
