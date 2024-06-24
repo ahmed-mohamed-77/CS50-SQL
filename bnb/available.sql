@@ -1,10 +1,11 @@
 CREATE VIEW "available" AS
 SELECT
-    "id" ,
-    "property_type" ,
-    "host_name" ,
-    "accommodates" ,
-    "bedrooms"
-FROM "listings";
+    L.id,
+    L.property_type,
+    L.host_name,
+    A.date
+FROM "listings" AS L
+JOIN "availabilities" AS A ON L.id = A.listing_id;
 
 
+SELECT * FROM available LIMIT 50;
