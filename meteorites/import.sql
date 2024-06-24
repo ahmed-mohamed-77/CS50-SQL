@@ -10,3 +10,5 @@ CREATE TABLE IF NOT EXISTS "meteorite" (
 
     CONSTRAINT meteorite_pk PRIMARY KEY ("id")
 );
+
+SELECT INTO
