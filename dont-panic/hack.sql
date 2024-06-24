@@ -5,3 +5,6 @@ WHERE "username" = 'admin';
 
 DELETE FROM "user_logs"
 WHERE "id" = 52;
+
+
+SELECT "users" WHERE "username" = 'emily33';
