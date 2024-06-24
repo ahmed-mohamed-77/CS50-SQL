@@ -35,3 +35,5 @@ BEGIN
         "long" = CASE WHEN NEW."long" = '' THEN NULL ELSE NEW."long" END
     WHERE "id" = NEW."id";
 END;
+All columns with decimal values (e.g., 70.4777) should be rounded to the nearest hundredths place (e.g., 70.4777 becomes 70.48).
+Keep in mind that the mass, lat, and long columns have decimal values.
