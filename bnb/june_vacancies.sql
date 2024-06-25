@@ -5,6 +5,6 @@ SELECT
     host_name,
     COUNT(A.date)
 FROM "listings" AS L
-JOIN "availabilities" AS A ON L.id = A.listing_id
+JOIN "availabilities" AS A ON  A.listing_id =  L.id
 WHERE A.date LIKE '2023-06-%'
-GROUP BY L.id, property_type, host_name;
+GROUP BY L.id;
