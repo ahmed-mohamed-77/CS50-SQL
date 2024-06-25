@@ -5,5 +5,6 @@ SELECT
     L.host_name,
     A.date
 FROM "listings" AS L
-JOIN "availabilities" AS A ON L.id = A.listing_id;
+JOIN "availabilities" AS A ON L.id = A.listing_id
+WHERE A.available = 'TRUE';
 
