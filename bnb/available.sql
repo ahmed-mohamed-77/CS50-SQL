@@ -7,5 +7,3 @@ SELECT
 FROM "listings" AS L
 JOIN "availabilities" AS A ON L.id = A.listing_id;
 
-
-SELECT * FROM available LIMIT 50;
