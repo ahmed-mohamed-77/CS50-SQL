@@ -1,10 +1,10 @@
 CREATE VIEW "june_vacancies" AS
 SELECT
-    L.id,
+    listings.id,
     property_type,
     host_name,
-    COUNT(A.date)
-FROM "listings" AS L
-JOIN "availabilities" AS A ON  A.listing_id =  L.id
-WHERE A.date LIKE '2023-06-%'
-GROUP BY L.id;
+    COUNT(availabilities.date)
+FROM "listings"
+JOIN "availabilities" ON  availabilities.listing_id =  listings.id
+WHERE availabilities.date LIKE '2023-06-%'
+GROUP BY listings.id;
