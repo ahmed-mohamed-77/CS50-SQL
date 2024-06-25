@@ -13,3 +13,5 @@ INSERT INTO "triplet" ("sentence_id", "starting_character", "length_character") 
 (2230, 50, 7),
 (2346, 44, 10),
 (3041, 14, 5);
+
+select "starting_character", "length_character"
