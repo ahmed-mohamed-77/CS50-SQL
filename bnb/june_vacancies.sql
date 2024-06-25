@@ -3,7 +3,7 @@ SELECT
     L.id,
     L.property_type,
     L.host_name,
-    COUNT(A.date) AS days_vacant
+    COUNT(A.date) 
 FROM "listings" AS L
 JOIN "availabilities" AS A ON L.id = A.listing_id
 WHERE A.date LIKE '2023-06-%'
