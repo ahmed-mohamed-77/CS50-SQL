@@ -14,4 +14,6 @@ INSERT INTO "triplet" ("sentence_id", "starting_character", "length_character") 
 (2346, 44, 10),
 (3041, 14, 5);
 
-select "starting_character", "length_character"
+SELECT SUBSTR(S.sentence, T.starting_character, T.length_character)
+FROM triplet AS T
+JOIN sentences AS S ON S.id = T.sentence_id;
