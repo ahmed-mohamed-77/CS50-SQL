@@ -5,6 +5,6 @@ SELECT
     L.host_name,
     COUNT(A.date) AS days_vacant
 FROM "listings" AS L
-LEFT JOIN "availabilities" AS A ON L.id = A.listing_id
+JOIN "availabilities" AS A ON L.id = A.listing_id
 WHERE A.date BETWEEN '2023-06-01' AND '2023-06-30'
 GROUP BY L.id;
