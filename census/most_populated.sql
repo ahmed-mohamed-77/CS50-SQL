@@ -10,3 +10,7 @@ FROM "census"
 WHERE "locality" LIKE '%Nepal%'
 GROUP BY "district"
 ORDER BY "population" DESC;
+
+
+SELECT * FROM "census"
+WHERE "locality" LIKE '%Nepal%' OR "locality" LIKE '%nepal%';
