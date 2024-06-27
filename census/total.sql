@@ -1,5 +1,10 @@
 
 CREATE VIEW "total" AS
 SELECT
-    "families","households","population","male","female"
+    SUM("families") AS "Families",
+    SUM("households") AS "Households",
+    SUM("population") AS "Population",
+    SUM("male") AS "Male",
+    SUM("female") AS "Female"
 FROM "census"
+WHERE "locality" LIKE '%Nepal%';
