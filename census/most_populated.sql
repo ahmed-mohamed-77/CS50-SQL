@@ -13,7 +13,7 @@ ORDER BY "population" DESC;
 
 
 SELECT * FROM "census"
-WHERE "locality" LIKE '%Nepal%' OR "locality" LIKE '%nepal%';
+WHERE "district" = 'Kathmandu';
 
 
 SELECT
@@ -24,6 +24,8 @@ SELECT
     SUM("male") AS "male",
     SUM("female") AS "female"
 FROM "census"
-WHERE "locality" = 'Nepal'
+WHERE "district" = 'Kathmandu'
 GROUP BY "district"
 ORDER BY "population" DESC;
+
+
