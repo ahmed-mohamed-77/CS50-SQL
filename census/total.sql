@@ -6,5 +6,4 @@ SELECT
     SUM("population") AS "Population",
     SUM("male") AS "Male",
     SUM("female") AS "Female"
-FROM "census"
-WHERE "locality" LIKE '%Nepal%';
+FROM "census";
