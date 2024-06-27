@@ -18,5 +18,5 @@ SELECT
     SUM("male") AS "Male",
     SUM("female") AS "Female"
 FROM "census"
-
-GROUP BY "district";
+GROUP BY "district"
+ORDER BY "Families" ASC;
