@@ -10,7 +10,4 @@ FROM "census"
 GROUP BY "district"
 ORDER BY "families" ASC;
 
-SELECT "district", "families"
-FROM "by_district"
-ORDER BY "families" ASC
-LIMIT 1 OFFSET 1;
+
