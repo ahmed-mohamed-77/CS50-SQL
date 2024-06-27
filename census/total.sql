@@ -1,0 +1,3 @@
+
+CREATE VIEW "total" AS
+
