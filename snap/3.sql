@@ -4,4 +4,7 @@ WHERE username = 'creativewisdom377 ';
 
 
 SELECT * FROM users
-WHERE username LIKE '%%'
+WHERE username LIKE '%creativewisdom377%';
+
+SELECT * FROM  "messages"
+WHERE 
