@@ -1,4 +1,3 @@
-EXPLAIN QUERY PLAN
 SELECT
     id,
     COUNT(from_user_id) AS "creativewisdom377",
