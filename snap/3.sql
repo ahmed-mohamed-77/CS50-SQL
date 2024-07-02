@@ -1,7 +1,7 @@
-
+EXPLAIN QUERY PLAN
 SELECT
     id,
-    COUNT(from_user_id),
+    COUNT(from_user_id) AS "creativewisdom377",
     to_user_id,
     picture,
     sent_timestamp,
@@ -13,4 +13,5 @@ WHERE "from_user_id" IN (
     WHERE username = 'creativewisdom377'
 )
 GROUP BY to_user_id
-ORDER BY COUNT(from_user_id) DESC;
+ORDER BY COUNT(from_user_id) DESC
+LIMIT 3;
