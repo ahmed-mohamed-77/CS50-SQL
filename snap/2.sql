@@ -2,4 +2,5 @@ Users need to be prevented from re-opening a message that has expired. Find when
 
 Ensure your query uses the index automatically created on the primary key column of the messages table.
 
-SELECT 
+SELECT * FROM messages
+WHERE id = 151;
