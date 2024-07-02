@@ -1,6 +1,6 @@
 SELECT
     id,
-    COUNT(from_user_id) AS "creativewisdom377",
+    from_user_id ,
     to_user_id,
     picture,
     sent_timestamp,
