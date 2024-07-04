@@ -8,4 +8,3 @@ Their password
 CREATE TABLE IF NOT EXISTS `users`(
     `id` INT AUTO_INCREMENT
 )
-G
