@@ -1,4 +1,4 @@
--- In this SQL file, write (and comment!) the schema of your database, including the CREATE TABLE, CREATE INDEX, CREATE VIEW, etc. statements that compose itCREATE TABLE IF NOT EXISTS "users"(
+CREATE TABLE IF NOT EXISTS "users"(
     "id" INTEGER,
     "username" VARCHAR(50) NOT NULL,
     "email" VARCHAR(35) NOT NULL,
