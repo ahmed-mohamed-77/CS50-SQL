@@ -66,21 +66,24 @@ In this section you should answer the following questions:
   - **PRIMARY KEY**: To uniquely identify each record.
   - **FOREIGN KEY**: To maintain referential integrity between tables.
   - **CHECK**: To enforce valid data (e.g., non-negative play counts).
-  
+
 ### Relationships
 
 In this section you should include your entity relationship diagram and describe the relationships between the entities in your database.
 
-## Optimizations
-
-In this section you should answer the following questions:
-
-* Which optimizations (e.g., indexes, views) did you create? Why?
+* **Users** can create **Playlists** and can have multiple **User History** records.
+* **Artists** can have multiple **Albums**.
+* **Albums** can contain multiple **Tracks**.
+* **Tracks** can be part of multiple **Playlists** and can be liked by multiple **Users**.
+* **Users** can like multiple **Tracks**.
 
 ## Limitations
 
 In this section you should answer the following questions:
 
-* What are the limitations of your design?
-* What might your database not be able to represent very well?
+* **What are the limitations of your design?**
+  - The design does not include support for audio file storage or streaming.
+  - It does not manage complex user permissions or roles beyond basic user authentication.
 
+* **What might your database not be able to represent very well?**
+  - Detailed analytics on user behavior beyond basic play counts and history.
